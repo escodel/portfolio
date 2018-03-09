@@ -13,6 +13,14 @@ module.exports = {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
+   /*
+  ** Include css not in components
+  */
+  css: [
+  // node.js module but we specify the pre-processor
+    { src: '~assets/main.sass', lang: 'sass' },
+    { src: 'font-awesome/scss/font-awesome.scss', lang: 'scss' }
+  ],
   /*
   ** Customize the progress bar color
   */
