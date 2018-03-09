@@ -5,9 +5,15 @@
         <a class="navbar-item">
           <img src="http://via.placeholder.com/150x50" alt="Eric Delia">
         </a>
+
+        <div class="navbar-burger" :class="{ 'is-active': showNav }" @click="showNav = !showNav">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </div>
 
-      <div class="navbar-menu">
+      <div class="navbar-menu" :class="{ 'is-active': showNav }">
         <div class="navbar-start">
           <a class="navbar-item" href="/">
             Home
@@ -18,33 +24,37 @@
         </div>
       </div>
 
-      <div class="navbar-end">
-        <a class="navbar-item" href="https://github.com/escodel">
+      <div class="navbar-end is-hidden-touch">
+        <a class="navbar-item" href="https://github.com/escodel" target="_blank">
           <span class="icon">
             <i class="fa fa-github"></i>
           </span>
         </a>
-        <a class="navbar-item" href="https://twitter.com/metkovic_">
+        <a class="navbar-item" href="https://twitter.com/metkovic_" target="_blank">
           <span class="icon">
             <i class="fa fa-twitter"></i>
           </span>
         </a>
-        <a class="navbar-item" href="https://soundcloud.com/metkovic">
+        <a class="navbar-item" href="https://soundcloud.com/metkovic" target="_blank">
           <span class="icon">
             <i class="fa fa-soundcloud"></i>
           </span>
         </a>
       </div>
-
-      <div class="navbar-burger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
     </nav>
     <nuxt/>
   </div>
 </template>
+
+<script>
+  export default {
+    data() {
+      return {
+        showNav: false
+      }
+    }
+  }
+</script>
 
 <style>
 /* html {
