@@ -1,7 +1,14 @@
 <template>
-    <section class="container">
-      <div>
-        <h2>About</h2>
+  <div>
+    <section class="hero is-primary">
+      <div class="hero-body">
+        <h1 class="title">About</h1>
       </div>
-  </section>
+    </section>
+    <section class="container is-fluid">
+      <div>
+        <p>Lorem ipsum</p>
+      </div>
+    </section>
+  </div>
 </template>
