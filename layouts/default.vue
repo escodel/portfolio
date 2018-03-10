@@ -18,6 +18,15 @@
           <a class="navbar-item" href="/">
             Home
           </a>
+          <a class="navbar-item" href="/cv">
+            CV
+          </a>
+          <a class="navbar-item" href="/music">
+            Music
+          </a>
+          <a class="navbar-item" href="/blog">
+            Blog
+          </a>
           <a class="navbar-item" href="/about">
             About
           </a>

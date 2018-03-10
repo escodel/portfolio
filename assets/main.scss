@@ -10,6 +10,14 @@ $link-hover: $highlight;
 
 @import '~bulma/bulma';
 
+section {
+  padding: 3rem 1.5rem;
+}
+
+.underline {
+  border-bottom: 4px $blue solid;
+}
+
 .img-circular {
   border-radius: 50%;
 }
