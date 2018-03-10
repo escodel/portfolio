@@ -7,7 +7,24 @@
     </section>
     <section class="container is-fluid">
       <div>
-        <p>Lorem ipsum</p>
+        <p>Statically generated site using:</p>
+        <ul>
+          <li>
+            <a href="#" target="_blank">
+              Vue
+            </a>
+          </li>
+          <li>
+            <a href="#" target="_blank">
+              Nuxt.js
+            </a>
+          </li>
+          <li>
+            <a href="#" target="_blank">
+              Bulma CSS
+            </a>
+          </li>
+        </ul>
       </div>
     </section>
   </div>

@@ -1,5 +1,15 @@
 @import '~bulma/sass/utilities/initial-variables';
 
-$blue: #72d0eb;
+$primary: #0B3C5D;
+$blue: #328CC1;
+$highlight: #D9B310;
+$ivoryblack: #1D2731;
+
+$link: $blue;
+$link-hover: $highlight;
 
 @import '~bulma/bulma';
+
+.img-circular {
+  border-radius: 50%;
+}
