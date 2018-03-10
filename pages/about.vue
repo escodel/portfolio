@@ -1,10 +1,10 @@
 <template>
   <div>
-    <section class="hero is-primary">
+    <div class="hero is-primary">
       <div class="hero-body">
         <h1 class="title">About</h1>
       </div>
-    </section>
+    </div>
     <section class="container is-fluid">
       <div>
         <p>Statically generated site using:</p>

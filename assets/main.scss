@@ -18,6 +18,10 @@ section {
   border-bottom: 4px $blue solid;
 }
 
+.highlight {
+  color: $highlight;
+}
+
 .img-circular {
   border-radius: 50%;
 }

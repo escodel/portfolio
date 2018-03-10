@@ -1,5 +1,5 @@
 <template>
-  <!-- <section class="container"> -->
+  <div>
     <!-- <app-logo/> -->
     <div class="hero is-primary">
       <div class="hero-body">
@@ -22,7 +22,27 @@
         </article>
       </div>
     </div>
-  <!-- </section> -->
+
+    <section>
+      <div class="columns has-text-centered">
+        <div class="column">
+          <span class="icon is-large">
+            <i class="fa fa-map-signs fa-3x highlight"></i>
+          </span>
+        </div>
+        <div class="column">
+          <span class="icon is-large">
+            <i class="fa fa-map-signs fa-3x highlight"></i>
+          </span>
+        </div>
+        <div class="column">
+          <span class="icon is-large">
+            <i class="fas fa-code-branch fa-3x highlight"></i>
+          </span>
+        </div>
+      </div>
+    </section>
+  </div>
 </template>
 
 <script>
