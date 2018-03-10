@@ -29,16 +29,31 @@
           <span class="icon is-large">
             <i class="fa fa-map-signs fa-3x highlight"></i>
           </span>
+          <section>
+            <p class="has-text-justified">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nec eleifend erat, eu pharetra ante. Donec sit amet lacus feugiat, laoreet nulla id, accumsan mauris. Sed lectus sapien, aliquam sit amet sapien eu, vulputate elementum felis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec tellus quam, sagittis a mi eu, iaculis accumsan nibh. Morbi vel accumsan magna, a commodo massa. Sed aliquet nisi maximus, ullamcorper ante non, ullamcorper odio.
+            </p>
+          </section>
         </div>
         <div class="column">
           <span class="icon is-large">
-            <i class="fa fa-map-signs fa-3x highlight"></i>
+            <i class="fa fa-pencil fa-3x highlight"></i>
           </span>
+          <section>
+            <p class="has-text-justified">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nec eleifend erat, eu pharetra ante. Donec sit amet lacus feugiat, laoreet nulla id, accumsan mauris. Sed lectus sapien, aliquam sit amet sapien eu, vulputate elementum felis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec tellus quam, sagittis a mi eu, iaculis accumsan nibh. Morbi vel accumsan magna, a commodo massa. Sed aliquet nisi maximus, ullamcorper ante non, ullamcorper odio.
+            </p>
+          </section>
         </div>
         <div class="column">
           <span class="icon is-large">
-            <i class="fas fa-code-branch fa-3x highlight"></i>
+            <i class="fa fa-code-fork fa-3x highlight"></i>
           </span>
+          <section>
+            <p class="has-text-justified">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nec eleifend erat, eu pharetra ante. Donec sit amet lacus feugiat, laoreet nulla id, accumsan mauris. Sed lectus sapien, aliquam sit amet sapien eu, vulputate elementum felis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec tellus quam, sagittis a mi eu, iaculis accumsan nibh. Morbi vel accumsan magna, a commodo massa. Sed aliquet nisi maximus, ullamcorper ante non, ullamcorper odio.
+            </p>
+          </section>
         </div>
       </div>
     </section>
