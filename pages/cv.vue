@@ -20,11 +20,21 @@
             <h2 class="title underline">
               Who I am
             </h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nec eleifend erat, eu pharetra ante. Donec sit amet lacus feugiat, laoreet nulla id, accumsan mauris. Sed lectus sapien, aliquam sit amet sapien eu, vulputate elementum felis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec tellus quam, sagittis a mi eu, iaculis accumsan nibh. Morbi vel accumsan magna, a commodo massa. Sed aliquet nisi maximus, ullamcorper ante non, ullamcorper odio. Nam in elit nec libero semper sodales a nec nulla.
-            </p>
+            <div class="content">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nec eleifend erat, eu pharetra ante. Donec sit amet lacus feugiat, laoreet nulla id, accumsan mauris. Sed lectus sapien, aliquam sit amet sapien eu, vulputate elementum felis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec tellus quam, sagittis a mi eu, iaculis accumsan nibh. Morbi vel accumsan magna, a commodo massa. Sed aliquet nisi maximus, ullamcorper ante non, ullamcorper odio. Nam in elit nec libero semper sodales a nec nulla.
+              </p>
+            </div>
+            <h2 class="title underline">
+              Skills
+            </h2>
+            <div class="content">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nec eleifend erat, eu pharetra ante. Donec sit amet lacus feugiat, laoreet nulla id, accumsan mauris. Sed lectus sapien, aliquam sit amet sapien eu, vulputate elementum felis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec tellus quam, sagittis a mi eu, iaculis accumsan nibh. Morbi vel accumsan magna, a commodo massa. Sed aliquet nisi maximus, ullamcorper ante non, ullamcorper odio. Nam in elit nec libero semper sodales a nec nulla.
+              </p>
+            </div>
           </div>
-          <div class="column">
+          <div class="column is-narrow">
             <h2 class="title underline">
               Education
             </h2>

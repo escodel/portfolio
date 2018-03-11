@@ -11,17 +11,23 @@
         <ul>
           <li>
             <a href="#" target="_blank">
-              Vue
+              <figure class="image is-64x64">
+                <img src="../assets/img/vue.png" title="Vue">
+              </figure>
             </a>
           </li>
           <li>
             <a href="#" target="_blank">
-              Nuxt.js
+              <figure class="image is-64x64">
+                <img src="../assets/img/nuxt.png" title="Nuxt.js">
+              </figure>
             </a>
           </li>
           <li>
             <a href="#" target="_blank">
-              Bulma CSS
+              <figure class="image is-64x64">
+                <img src="../assets/img/bulma.png" title="Bulma CSS">
+              </figure>
             </a>
           </li>
         </ul>
