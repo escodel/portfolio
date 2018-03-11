@@ -28,10 +28,28 @@
             <h2 class="title underline">
               Skills
             </h2>
-            <div class="content">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nec eleifend erat, eu pharetra ante. Donec sit amet lacus feugiat, laoreet nulla id, accumsan mauris. Sed lectus sapien, aliquam sit amet sapien eu, vulputate elementum felis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec tellus quam, sagittis a mi eu, iaculis accumsan nibh. Morbi vel accumsan magna, a commodo massa. Sed aliquet nisi maximus, ullamcorper ante non, ullamcorper odio. Nam in elit nec libero semper sodales a nec nulla.
-              </p>
+            <div class="tabs is-centered">
+              <ul>
+                <li v-for="tab in tabs" :key="tab.id" :class="{ 'is-active' : (tab.name === activeTab) }">
+                  <a @click.prevent="setActiveTab(tab.name)">{{ tab.name }}</a>
+                </li>
+              </ul>
+            </div>
+            <div v-if="(activeTab === 'HTML')">
+              HTML
+            </div>
+            <div v-if="(activeTab === 'CSS')">
+              <ul>
+                <li>CSS3</li>
+                <li>Bootstrap4</li>
+                <li>Bulma CSS</li>
+              </ul>
+            </div>
+            <div v-if="(activeTab === 'JavaScript')">
+              JavaScript
+            </div>
+            <div v-if="(activeTab === 'Other')">
+              Other
             </div>
           </div>
           <div class="column is-narrow">
@@ -60,3 +78,35 @@
     </section>
   </div>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      tabs: [
+        {
+          name: 'HTML'
+        },
+        {
+          name: 'CSS'
+        },
+        {
+          name: 'JavaScript'
+        },
+        {
+          name: 'Other'
+        }
+      ],
+      activeTab: null
+    }
+  },
+  mounted() {
+    this.activeTab = this.tabs[0].name
+  },
+  methods: {
+    setActiveTab(name) {
+      this.activeTab = name
+    }
+  }
+}
+</script>

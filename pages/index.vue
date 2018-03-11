@@ -23,6 +23,12 @@
       </div>
     </div>
 
+    <div class="hero is-light">
+      <div class="hero-body is-size-5">
+        Senior consultant with seven years' experience developing for the web. Travels have included UI/UX design, web/enterprise content management, technical/creative writing, and building brand awareness.
+      </div>
+    </div>
+
     <section>
       <div class="columns has-text-centered">
         <div class="column">
