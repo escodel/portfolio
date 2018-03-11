@@ -3,7 +3,7 @@
     <!-- <app-logo/> -->
     <div class="hero is-primary">
       <div class="hero-body">
-        <article class="media">
+        <article class="media container">
           <figure class="media-left">
             <p class="image is-96x96">
               <img src="../assets/img/escodel-527.png" class="img-circular">
@@ -24,12 +24,12 @@
     </div>
 
     <div class="hero is-light">
-      <div class="hero-body is-size-5">
+      <div class="hero-body is-size-5 container">
         Senior consultant with seven years' experience developing for the web. Travels have included UI/UX design, web/enterprise content management, technical/creative writing, and building brand awareness.
       </div>
     </div>
 
-    <section>
+    <section class="container">
       <div class="columns has-text-centered">
         <div class="column">
           <span class="icon is-large">
@@ -40,7 +40,7 @@
               Strategy
             </h2>
             <p class="has-text-justified">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nec eleifend erat, eu pharetra ante. Donec sit amet lacus feugiat, laoreet nulla id, accumsan mauris. Sed lectus sapien, aliquam sit amet sapien eu, vulputate elementum felis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec tellus quam, sagittis a mi eu, iaculis accumsan nibh. Morbi vel accumsan magna, a commodo massa. Sed aliquet nisi maximus, ullamcorper ante non, ullamcorper odio.
+              From gathering requirements to leading strategy for corporate intranet to development process improvement for large organizations, it all begins with a roadmap.
             </p>
           </section>
         </div>
@@ -53,7 +53,7 @@
               Design
             </h2>
             <p class="has-text-justified">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nec eleifend erat, eu pharetra ante. Donec sit amet lacus feugiat, laoreet nulla id, accumsan mauris. Sed lectus sapien, aliquam sit amet sapien eu, vulputate elementum felis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec tellus quam, sagittis a mi eu, iaculis accumsan nibh. Morbi vel accumsan magna, a commodo massa. Sed aliquet nisi maximus, ullamcorper ante non, ullamcorper odio.
+              Designing wireframes and crafting user experience journeys, collecting iterative feedback from clients and refining their needs into actionable objectives.
             </p>
           </section>
         </div>
@@ -66,7 +66,7 @@
               Code
             </h2>
             <p class="has-text-justified">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nec eleifend erat, eu pharetra ante. Donec sit amet lacus feugiat, laoreet nulla id, accumsan mauris. Sed lectus sapien, aliquam sit amet sapien eu, vulputate elementum felis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec tellus quam, sagittis a mi eu, iaculis accumsan nibh. Morbi vel accumsan magna, a commodo massa. Sed aliquet nisi maximus, ullamcorper ante non, ullamcorper odio.
+              Where the rubber meets the road. Building sites and applications using the pillars of front-end development (HTML, CSS, JavaScript), while leveraging the latest frameworks and libraries for bleeding-edge features.
             </p>
           </section>
         </div>

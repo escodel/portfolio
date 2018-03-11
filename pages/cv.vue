@@ -2,19 +2,21 @@
   <div>
     <div class="hero is-primary">
       <div class="hero-body">
-        <h1 class="title">
-          Eric Delia
-        </h1>
-        <h2 class="subtitle">
-          <a href="mailto:escodel@gmail.com">
-            escodel@gmail.com
-          </a>
-        </h2>
+        <div class="container">
+          <h1 class="title">
+            Eric Delia
+          </h1>
+          <h2 class="subtitle">
+            <a href="mailto:escodel@gmail.com">
+              escodel@gmail.com
+            </a>
+          </h2>
+        </div>
       </div>
     </div>
 
     <section>
-      <div class="container is-fluid">
+      <div class="container">
         <div class="columns">
           <div class="column">
             <h2 class="title underline">
@@ -52,6 +54,7 @@
               Other
             </div>
           </div>
+
           <div class="column is-narrow">
             <h2 class="title underline">
               Education
@@ -72,6 +75,54 @@
                 </div>
               </div>
             </article>
+
+            <h2 class="title underline">
+              Industries
+            </h2>
+            <ul>
+              <li>
+                <span class="icon">
+                  <i class="fa fa-building"></i>
+                </span>
+                State and Federal Government
+              </li>
+              <li>
+                <span class="icon">
+                  <i class="fa fa-plane"></i>
+                </span>
+                Aeronautics
+              </li>
+              <li>
+                <span class="icon">
+                  <i class="fa fa-money"></i>
+                </span>
+                Financial Services
+              </li>
+              <li>
+                <span class="icon">
+                  <i class="fa fa-lightbulb-o"></i>
+                </span>
+                Energy
+              </li>
+              <li>
+                <span class="icon">
+                  <i class="fa fa-cogs"></i>
+                </span>
+                Engineering
+              </li>
+              <li>
+                <span class="icon">
+                  <i class="fa fa-phone"></i>
+                </span>
+                Telecommunications
+              </li>
+              <li>
+                <span class="icon">
+                  <i class="fa fa-globe"></i>
+                </span>
+                Environmental Planning
+              </li>
+            </ul>
           </div>
         </div>
       </div>

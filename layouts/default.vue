@@ -39,6 +39,11 @@
             <i class="fa fa-github"></i>
           </span>
         </a>
+        <a class="navbar-item" href="https://www.linkedin.com/in/ericdelia" target="_blank">
+          <span class="icon">
+            <i class="fa fa-linkedin"></i>
+          </span>
+        </a>
         <a class="navbar-item" href="https://twitter.com/metkovic_" target="_blank">
           <span class="icon">
             <i class="fa fa-twitter"></i>
