@@ -72,7 +72,7 @@
               </div>
             </div>
 
-            <h2 class="title underline">
+            <!-- <h2 class="title underline">
               Skills
             </h2>
             <div class="tabs is-centered">
@@ -102,7 +102,7 @@
               <ul>
                 <li>Git</li>
               </ul>
-            </div>
+            </div> -->
           </div>
 
           <div class="column is-narrow">
@@ -123,17 +123,17 @@
                     <em>Cum Laude</em>
                   </p>
                 </div>
-                <p class="field"><span class="tag">Virginia Capital Semester</span></p>
-                <p class="field"><span class="tag">Model United Nations</span></p>
-                <p class="field"><span class="tag">International Scholar Laureate Program</span></p>
-                <p class="field"><span class="tag">Golden Key Honour Society</span></p>
+                <p class="field"><span class="tag is-dark">Virginia Capital Semester</span></p>
+                <p class="field"><span class="tag is-dark">Model United Nations</span></p>
+                <p class="field"><span class="tag is-dark">International Scholar Laureate Program</span></p>
+                <p class="field"><span class="tag is-dark">Golden Key Honour Society</span></p>
               </div>
             </article>
             <br>
             <h2 class="title underline">
               Industries
             </h2>
-            <ul>
+            <ul style="margin-left:2rem">
               <li>
                 <span class="icon">
                   <i class="fa fa-building"></i>
@@ -191,7 +191,7 @@
             </ul>
             <br>
             <h2 class="title underline">
-              Skills
+              Software
             </h2>
             <nav class="level">
               <div class="level-item has-text-centered">
@@ -225,9 +225,6 @@
                 </a>
               </div>
             </nav>
-            <!-- <h3 class="subtitle has-text-centered">
-              CSS
-            </h3> -->
             <nav class="level">
               <div class="level-item has-text-centered">
                 <a href="#" target="_blank">
@@ -240,22 +237,22 @@
                 </a>
               </div>
               <div class="level-item has-text-centered">
-                <a href="https://nuxtjs.org" target="_blank">
+                <a href="#" target="_blank">
                   <figure class="image is-64x64">
-                    <img src="../assets/img/nuxt.png" title="Nuxt.js">
+                    <img src="../assets/img/bootstrap.png" title="Bootstrap">
                   </figure>
                   <p class="heading">
-                    Nuxt
+                    Bootstrap
                   </p>
                 </a>
               </div>
               <div class="level-item has-text-centered">
-                <a href="https://bulma.io" target="_blank">
+                <a href="#" target="_blank">
                   <figure class="image is-64x64">
-                    <img src="../assets/img/bulma.png" title="Bulma CSS">
+                    <img src="../assets/img/git.png" title="Git">
                   </figure>
                   <p class="heading">
-                    Bulma
+                    Git
                   </p>
                 </a>
               </div>
@@ -288,6 +285,102 @@
                   </figure>
                   <p class="heading">
                     Bulma
+                  </p>
+                </a>
+              </div>
+            </nav>
+            <nav class="level">
+              <div class="level-item has-text-centered">
+                <a href="#" target="_blank">
+                  <figure class="image is-64x64">
+                    <img src="../assets/img/nodejs.png" title="NodeJS">
+                  </figure>
+                  <p class="heading">
+                    Node
+                  </p>
+                </a>
+              </div>
+              <div class="level-item has-text-centered">
+                <a href="#" target="_blank">
+                  <figure class="image is-64x64">
+                    <img src="../assets/img/npm.png" title="npm">
+                  </figure>
+                  <p class="heading">
+                    NPM
+                  </p>
+                </a>
+              </div>
+              <div class="level-item has-text-centered">
+                <a href="#" target="_blank">
+                  <figure class="image is-64x64">
+                    <img src="../assets/img/parceljs.jpg" title="Parcel">
+                  </figure>
+                  <p class="heading">
+                    Parcel
+                  </p>
+                </a>
+              </div>
+            </nav>
+            <nav class="level">
+              <div class="level-item has-text-centered">
+                <a href="#" target="_blank">
+                  <figure class="image is-64x64">
+                    <img src="../assets/img/gulp.png" title="Gulp">
+                  </figure>
+                  <p class="heading">
+                    Gulp
+                  </p>
+                </a>
+              </div>
+              <div class="level-item has-text-centered">
+                <a href="#" target="_blank">
+                  <figure class="image is-64x64">
+                    <img src="../assets/img/js.png" title="ES6+">
+                  </figure>
+                  <p class="heading">
+                    ES6+
+                  </p>
+                </a>
+              </div>
+              <div class="level-item has-text-centered">
+                <a href="#" target="_blank">
+                  <figure class="image is-64x64">
+                    <img src="../assets/img/babel.png" title="Babel">
+                  </figure>
+                  <p class="heading">
+                    Babel
+                  </p>
+                </a>
+              </div>
+            </nav>
+            <nav class="level">
+              <div class="level-item has-text-centered">
+                <a href="#" target="_blank">
+                  <figure class="image is-64x64">
+                    <img src="../assets/img/webpack.svg" title="Webpack">
+                  </figure>
+                  <p class="heading">
+                    Webpack
+                  </p>
+                </a>
+              </div>
+              <div class="level-item has-text-centered">
+                <a href="#" target="_blank">
+                  <figure class="image is-64x64">
+                    <img src="../assets/img/sass.png" title="Sass">
+                  </figure>
+                  <p class="heading">
+                    Sass
+                  </p>
+                </a>
+              </div>
+              <div class="level-item has-text-centered">
+                <a href="#" target="_blank">
+                  <figure class="image is-64x64">
+                    <img src="../assets/img/vscode.svg" title="Visual Studio">
+                  </figure>
+                  <p class="heading">
+                    VS
                   </p>
                 </a>
               </div>
