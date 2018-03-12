@@ -32,42 +32,6 @@
           </li>
         </ul>
       </div>
-      <div class="box">
-        <!-- <figure class="image">
-          <img src="../assets/img/raleigh_map_watercolor.jpeg" title="Raleigh, North Carolina">
-        </figure> -->
-        <div class="bg-raleigh">
-          <section class="overlay-white">
-            <ul>
-              <li>Item One</li>
-              <li>Item Two</li>
-              <li>Item Three</li>
-            </ul>
-          </section>
-        </div>
-      </div>
-      <div class="box">
-        <div class="bg-nashville">
-          <section class="overlay-white">
-            <ul>
-              <li>Item One</li>
-              <li>Item Two</li>
-              <li>Item Three</li>
-            </ul>
-          </section>
-        </div>
-      </div>
-      <div class="box">
-        <div class="bg-richmond">
-          <section class="overlay-white">
-            <ul>
-              <li>Item One</li>
-              <li>Item Two</li>
-              <li>Item Three</li>
-            </ul>
-          </section>
-        </div>
-      </div>
     </section>
   </div>
 </template>

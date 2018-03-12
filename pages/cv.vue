@@ -55,7 +55,9 @@
                 </div>
               </div>
               <hr>
-              <article class="media" :class="workHistory.background">
+              <div :class="workHistory.background">
+                <section class="overlay-white">
+              <article class="media">
                 <figure class="media-left">
                   <p class="image is-64x64">
                   </p>
@@ -70,6 +72,8 @@
                   </nav>
                 </div>
               </article>
+                </section>
+              </div>
             </div>
 
             <h2 class="title underline">
