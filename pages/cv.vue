@@ -48,14 +48,14 @@
             </nav> -->
 
             <div v-for="workHistory in workHistories" :key="workHistory.id" class="box">
-              <article class="media">
-                <figure class="media-left">
+              <div class="columns">
+                <figure class="column is-narrow">
                   <p class="image is-64x64">
                     <img :src="workHistory.img">
                   </p>
                 </figure>
-                <div class="media-content">
-                  <div class="content">
+                <div class="column">
+                  <div class="content has-text-left">
                     <p>
                     <span class="has-text-black-ter">{{ workHistory.company }}</span>
                     <br>
@@ -65,13 +65,14 @@
                     </p>
                   </div>
                 </div>
-                <div class="media-right">
+                <div class="column is-size-7 is-narrow">
                   <span class="icon">
                     <i class="fa fa-calendar"></i>
                   </span>
                   {{ workHistory.timeframe }}
                 </div>
-              </article>
+              </div>
+              <hr>
               <article class="media">
                 <figure class="media-left">
                   <p class="image is-64x64">
