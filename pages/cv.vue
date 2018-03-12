@@ -58,10 +58,6 @@
               <div :class="workHistory.background">
                 <section class="overlay-white">
               <article class="media">
-                <figure class="media-left">
-                  <p class="image is-64x64">
-                  </p>
-                </figure>
                 <div class="media-content">
                   <nav class="level">
                     <section class="level-left content">
@@ -126,16 +122,14 @@
                     B.A. Political Science, 2007<br>
                     <em>Cum Laude</em>
                   </p>
-                  <nav class="panel">
-                    <div class="panel-block">Virginia Capital Semester</div>
-                    <div class="panel-block">Model United Nations</div>
-                    <div class="panel-block">International Scholar Laureate Program</div>
-                    <div class="panel-block">Golden Key Honour Society</div>
-                  </nav>
                 </div>
+                <p class="field"><span class="tag">Virginia Capital Semester</span></p>
+                <p class="field"><span class="tag">Model United Nations</span></p>
+                <p class="field"><span class="tag">International Scholar Laureate Program</span></p>
+                <p class="field"><span class="tag">Golden Key Honour Society</span></p>
               </div>
             </article>
-
+            <br>
             <h2 class="title underline">
               Industries
             </h2>
@@ -195,6 +189,115 @@
                 Consulting
               </li>
             </ul>
+            <br>
+            <h2 class="title underline">
+              Skills
+            </h2>
+            <h3 class="subtitle has-text-centered">
+              HTML
+            </h3>
+            <nav class="level">
+              <div class="level-item has-text-centered">
+                <a href="https://vuejs.org" target="_blank">
+                  <figure class="image is-64x64">
+                    <img src="../assets/img/vue.png" title="Vue">
+                  </figure>
+                  <p class="heading">
+                    Vue
+                  </p>
+                </a>
+              </div>
+              <div class="level-item has-text-centered">
+                <a href="https://nuxtjs.org" target="_blank">
+                  <figure class="image is-64x64">
+                    <img src="../assets/img/nuxt.png" title="Nuxt.js">
+                  </figure>
+                  <p class="heading">
+                    Nuxt
+                  </p>
+                </a>
+              </div>
+              <div class="level-item has-text-centered">
+                <a href="https://bulma.io" target="_blank">
+                  <figure class="image is-64x64">
+                    <img src="../assets/img/bulma.png" title="Bulma CSS">
+                  </figure>
+                  <p class="heading">
+                    Bulma
+                  </p>
+                </a>
+              </div>
+            </nav>
+            <h3 class="subtitle has-text-centered">
+              CSS
+            </h3>
+            <nav class="level">
+              <div class="level-item has-text-centered">
+                <a href="https://vuejs.org" target="_blank">
+                  <figure class="image is-64x64">
+                    <img src="../assets/img/vue.png" title="Vue">
+                  </figure>
+                  <p class="heading">
+                    Vue
+                  </p>
+                </a>
+              </div>
+              <div class="level-item has-text-centered">
+                <a href="https://nuxtjs.org" target="_blank">
+                  <figure class="image is-64x64">
+                    <img src="../assets/img/nuxt.png" title="Nuxt.js">
+                  </figure>
+                  <p class="heading">
+                    Nuxt
+                  </p>
+                </a>
+              </div>
+              <div class="level-item has-text-centered">
+                <a href="https://bulma.io" target="_blank">
+                  <figure class="image is-64x64">
+                    <img src="../assets/img/bulma.png" title="Bulma CSS">
+                  </figure>
+                  <p class="heading">
+                    Bulma
+                  </p>
+                </a>
+              </div>
+            </nav>
+            <h3 class="subtitle has-text-centered">
+              JavaScript
+            </h3>
+            <nav class="level">
+              <div class="level-item has-text-centered">
+                <a href="https://vuejs.org" target="_blank">
+                  <figure class="image is-64x64">
+                    <img src="../assets/img/vue.png" title="Vue">
+                  </figure>
+                  <p class="heading">
+                    Vue
+                  </p>
+                </a>
+              </div>
+              <div class="level-item has-text-centered">
+                <a href="https://nuxtjs.org" target="_blank">
+                  <figure class="image is-64x64">
+                    <img src="../assets/img/nuxt.png" title="Nuxt.js">
+                  </figure>
+                  <p class="heading">
+                    Nuxt
+                  </p>
+                </a>
+              </div>
+              <div class="level-item has-text-centered">
+                <a href="https://bulma.io" target="_blank">
+                  <figure class="image is-64x64">
+                    <img src="../assets/img/bulma.png" title="Bulma CSS">
+                  </figure>
+                  <p class="heading">
+                    Bulma
+                  </p>
+                </a>
+              </div>
+            </nav>
           </div>
         </div>
       </div>
