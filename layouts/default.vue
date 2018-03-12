@@ -64,8 +64,14 @@
   export default {
     data() {
       return {
-        showNav: false
+        showNav: false,
+        activeItem: ''
       }
+    },
+    mounted() {
+      let route = this.$route.path
+      let navItem = document.querySelector('[href="' + route + '"]')
+      navItem.classList.add('is-active')
     }
   }
 </script>

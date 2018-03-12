@@ -40,3 +40,31 @@ section {
 .img-circular {
   border-radius: 50%;
 }
+
+.overlay-white {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.bg-raleigh {
+  background-image: url('./img/raleigh_map_watercolor.jpeg');
+  background-position: center center;
+  background-repeat:  no-repeat;
+  background-attachment: fixed;
+  background-size:  cover;
+}
+
+.bg-nashville {
+  background-image: url('./img/nashville_map_watercolor.jpeg');
+  background-position: center center;
+  background-repeat:  no-repeat;
+  background-attachment: fixed;
+  background-size:  cover;
+}
+
+.bg-richmond {
+  background-image: url('./img/richmond_map_watercolor.jpeg');
+  background-position: center center;
+  background-repeat:  no-repeat;
+  background-attachment: fixed;
+  background-size:  cover;
+}

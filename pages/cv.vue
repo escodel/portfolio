@@ -55,18 +55,18 @@
                 </div>
               </div>
               <hr>
-              <article class="media">
+              <article class="media" :class="workHistory.background">
                 <figure class="media-left">
                   <p class="image is-64x64">
                   </p>
                 </figure>
                 <div class="media-content">
                   <nav class="level">
-                    <div class="level-left content">
-                      <ul>
+                    <section class="level-left content">
+                      <ul class="is-marginless">
                         <li v-for="responsibility in workHistory.responsibilities" :key="responsibility.id">{{ responsibility }}</li>
                       </ul>
-                    </div>
+                    </section>
                   </nav>
                 </div>
               </article>
@@ -221,6 +221,7 @@ export default {
           timeframe: 'Aug. 2016 - Present',
           title: 'Senior Consultant',
           location: 'Raleigh, NC',
+          background: 'bg-raleigh',
           responsibilities: [
             'do this........................................',
             'do that',
@@ -233,6 +234,7 @@ export default {
           timeframe: 'Aug. 2014 - Aug. 2016',
           title: 'Consultant',
           location: 'Raleigh, NC',
+          background: 'bg-raleigh',
           responsibilities: [
             'do this........................................',
             'do that',
@@ -245,6 +247,7 @@ export default {
           timeframe: 'Aug. 2013 - Aug. 2014',
           title: 'SharePoint / Web Developer',
           location: 'Raleigh, NC',
+          background: 'bg-raleigh',
           responsibilities: [
             'do this........................................',
             'do that',
@@ -257,6 +260,7 @@ export default {
           timeframe: 'Apr. 2013 - Aug. 2013',
           title: 'SharePoint / Web Developer',
           location: 'Nashville, TN',
+          background: 'bg-nashville',
           responsibilities: [
             'do this........................................',
             'do that',
@@ -269,6 +273,7 @@ export default {
           timeframe: 'Feb. 2012 - Apr. 2013',
           title: 'Content Administrator',
           location: 'Nashville, TN',
+          background: 'bg-nashville',
           responsibilities: [
             'do this........................................',
             'do that',
@@ -281,6 +286,7 @@ export default {
           timeframe: 'Mar. 2011 - Feb. 2012',
           title: 'Web Content Manager',
           location: 'Richmond, VA',
+          background: 'bg-richmond',
           responsibilities: [
             'do this........................................',
             'do that',
