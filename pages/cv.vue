@@ -20,13 +20,75 @@
         <div class="columns">
           <div class="column">
             <h2 class="title underline">
-              Who I am
+              Work History
             </h2>
-            <div class="content">
+            <!-- <div class="content">
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nec eleifend erat, eu pharetra ante. Donec sit amet lacus feugiat, laoreet nulla id, accumsan mauris. Sed lectus sapien, aliquam sit amet sapien eu, vulputate elementum felis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec tellus quam, sagittis a mi eu, iaculis accumsan nibh. Morbi vel accumsan magna, a commodo massa. Sed aliquet nisi maximus, ullamcorper ante non, ullamcorper odio. Nam in elit nec libero semper sodales a nec nulla.
+                After getting a start in state government, I realized technology was the driving force for workplace productivity.
               </p>
+            </div> -->
+
+            <!-- <nav class="panel">
+              <p class="panel-heading">
+                Work History
+              </p>
+              <a class="panel-block">
+                <span class="panel-icon">
+                  <i class="fa fa-users"></i>
+                </span>
+                <h3 class="subtitle">
+                  Cardinal Solutions
+                </h3>
+                <section>
+                  <ul>
+                    <li>Blah blah blah</li>
+                  </ul>
+                </section>
+              </a>
+            </nav> -->
+
+            <div v-for="workHistory in workHistories" :key="workHistory.id" class="box">
+              <article class="media">
+                <figure class="media-left">
+                  <p class="image is-64x64">
+                    <img :src="workHistory.img">
+                  </p>
+                </figure>
+                <div class="media-content">
+                  <div class="content">
+                    <p>
+                    <span class="has-text-black-ter">{{ workHistory.company }}</span>
+                    <br>
+                        <span class="has-text-grey">
+                          {{ workHistory.title }}
+                        </span>
+                    </p>
+                  </div>
+                </div>
+                <div class="media-right">
+                  <span class="icon">
+                    <i class="fa fa-calendar"></i>
+                  </span>
+                  {{ workHistory.timeframe }}
+                </div>
+              </article>
+              <article class="media">
+                <figure class="media-left">
+                  <p class="image is-64x64">
+                  </p>
+                </figure>
+                <div class="media-content">
+                  <nav class="level">
+                    <div class="level-left content">
+                      <ul>
+                        <li v-for="responsibility in workHistory.responsibilities" :key="responsibility.id">{{ responsibility }}</li>
+                      </ul>
+                    </div>
+                  </nav>
+                </div>
+              </article>
             </div>
+
             <h2 class="title underline">
               Skills
             </h2>
@@ -38,20 +100,25 @@
               </ul>
             </div>
             <div v-if="(activeTab === 'HTML')">
-              HTML
+              <ul>
+                <li>HTML</li>
+                <li>Handlebars</li>
+              </ul>
             </div>
             <div v-if="(activeTab === 'CSS')">
               <ul>
                 <li>CSS3</li>
-                <li>Bootstrap4</li>
-                <li>Bulma CSS</li>
+                <li>Bootstrap</li>
+                <li>Bulma</li>
               </ul>
             </div>
             <div v-if="(activeTab === 'JavaScript')">
               JavaScript
             </div>
             <div v-if="(activeTab === 'Other')">
-              Other
+              <ul>
+                <li>Git</li>
+              </ul>
             </div>
           </div>
 
@@ -122,6 +189,12 @@
                 </span>
                 Environmental Planning
               </li>
+              <li>
+                <span class="icon">
+                  <i class="fa fa-users"></i>
+                </span>
+                Consulting
+              </li>
             </ul>
           </div>
         </div>
@@ -148,7 +221,53 @@ export default {
           name: 'Other'
         }
       ],
-      activeTab: null
+      activeTab: null,
+      workHistories: [
+        {
+          company: 'Cardinal Solutions',
+          img: require('../assets/img/cardinal_solutions.jpg'),
+          timeframe: 'Aug. 2016 - Present',
+          title: 'Senior Consultant',
+          responsibilities: [
+            'do this........................................',
+            'do that',
+            'etc'
+          ]
+        },
+        {
+          company: 'Cardinal Solutions',
+          img: require('../assets/img/cardinal_solutions.jpg'),
+          timeframe: 'Aug. 2014 - Aug. 2016',
+          title: 'Consultant',
+          responsibilities: [
+            'do this........................................',
+            'do that',
+            'etc'
+          ]
+        },
+        {
+          company: 'URS Corporation',
+          img: require('../assets/img/urs_corporation.jpg'),
+          timeframe: 'Aug. 2013 - Aug. 2014',
+          title: 'SharePoint / Web Developer',
+          responsibilities: [
+            'do this........................................',
+            'do that',
+            'etc'
+          ]
+        },
+        {
+          company: 'Asurion',
+          img: require('../assets/img/asurion.jpg'),
+          timeframe: 'Apr. 2013 - Aug. 2013',
+          title: 'SharePoint / Web Developer',
+          responsibilities: [
+            'do this........................................',
+            'do that',
+            'etc'
+          ]
+        },
+      ]
     }
   },
   mounted() {

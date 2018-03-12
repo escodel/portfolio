@@ -25,7 +25,7 @@
 
     <div class="hero is-light">
       <div class="hero-body is-size-5 container">
-        Senior consultant with seven years' experience developing for the web. Travels have included UI/UX design, web/enterprise content management, technical/creative writing, and building brand awareness.
+        Senior consultant with seven years' experience developing for the web, 10+ years in a variety of industries. Travels have included UI/UX design, web/enterprise content management, technical/creative writing, and building brand awareness.
       </div>
     </div>
 
@@ -40,7 +40,7 @@
               Strategy
             </h2>
             <p class="has-text-justified">
-              From gathering requirements to leading strategy for corporate intranet to development process improvement for large organizations, it all begins with a roadmap.
+              From gathering requirements to guiding junior team members to leading strategy for corporate intranet to development process improvement for large organizations, it all begins with a roadmap.
             </p>
           </section>
         </div>
