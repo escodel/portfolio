@@ -7,30 +7,40 @@
     </div>
     <section class="container is-fluid">
       <div>
-        <p>Statically generated site using:</p>
-        <ul>
-          <li>
-            <a href="#" target="_blank">
+        <p class="has-text-centered">Statically generated site using:</p>
+        <br>
+        <nav class="level">
+          <div class="level-item has-text-centered">
+            <a href="https://vuejs.org" target="_blank">
               <figure class="image is-64x64">
                 <img src="../assets/img/vue.png" title="Vue">
               </figure>
+              <p class="heading">
+                Vue
+              </p>
             </a>
-          </li>
-          <li>
-            <a href="#" target="_blank">
+          </div>
+          <div class="level-item has-text-centered">
+            <a href="https://nuxtjs.org" target="_blank">
               <figure class="image is-64x64">
                 <img src="../assets/img/nuxt.png" title="Nuxt.js">
               </figure>
+              <p class="heading">
+                Nuxt
+              </p>
             </a>
-          </li>
-          <li>
-            <a href="#" target="_blank">
+          </div>
+          <div class="level-item has-text-centered">
+            <a href="https://bulma.io" target="_blank">
               <figure class="image is-64x64">
                 <img src="../assets/img/bulma.png" title="Bulma CSS">
               </figure>
+              <p class="heading">
+                Bulma
+              </p>
             </a>
-          </li>
-        </ul>
+          </div>
+        </nav>
       </div>
     </section>
   </div>

@@ -131,9 +131,6 @@
                     <div class="panel-block">Model United Nations</div>
                     <div class="panel-block">International Scholar Laureate Program</div>
                     <div class="panel-block">Golden Key Honour Society</div>
-                    <!-- <li>International Scholar Laureate Program</li>
-                    <li>Virginia Capital Semester</li>
-                    <li>Model United Nations</li> -->
                   </nav>
                 </div>
               </div>
@@ -184,6 +181,12 @@
                   <i class="fa fa-globe"></i>
                 </span>
                 Environmental Planning
+              </li>
+              <li>
+                <span class="icon">
+                  <i class="fa fa-bus"></i>
+                </span>
+                Transportation
               </li>
               <li>
                 <span class="icon">
