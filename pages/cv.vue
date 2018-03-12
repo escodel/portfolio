@@ -22,31 +22,6 @@
             <h2 class="title underline">
               Work History
             </h2>
-            <!-- <div class="content">
-              <p>
-                After getting a start in state government, I realized technology was the driving force for workplace productivity.
-              </p>
-            </div> -->
-
-            <!-- <nav class="panel">
-              <p class="panel-heading">
-                Work History
-              </p>
-              <a class="panel-block">
-                <span class="panel-icon">
-                  <i class="fa fa-users"></i>
-                </span>
-                <h3 class="subtitle">
-                  Cardinal Solutions
-                </h3>
-                <section>
-                  <ul>
-                    <li>Blah blah blah</li>
-                  </ul>
-                </section>
-              </a>
-            </nav> -->
-
             <div v-for="workHistory in workHistories" :key="workHistory.id" class="box">
               <div class="columns">
                 <figure class="column is-narrow">
@@ -57,11 +32,18 @@
                 <div class="column">
                   <div class="content has-text-left">
                     <p>
-                    <span class="has-text-black-ter">{{ workHistory.company }}</span>
-                    <br>
-                        <span class="has-text-grey">
-                          {{ workHistory.title }}
+                      <span class="has-text-black-ter">{{ workHistory.company }}</span>
+                      <br>
+                      <span class="has-text-grey">
+                        {{ workHistory.title }}
+                      </span>
+                      <br>
+                      <span class="has-text-grey">
+                        <span class="icon">
+                          <i class="fa fa-map-marker"></i>
                         </span>
+                        {{ workHistory.location }}
+                      </span>
                     </p>
                   </div>
                 </div>
@@ -140,6 +122,15 @@
                     B.A. Political Science, 2007<br>
                     <em>Cum Laude</em>
                   </p>
+                  <nav class="panel">
+                    <div class="panel-block">Virginia Capital Semester</div>
+                    <div class="panel-block">Model United Nations</div>
+                    <div class="panel-block">International Scholar Laureate Program</div>
+                    <div class="panel-block">Golden Key Honour Society</div>
+                    <!-- <li>International Scholar Laureate Program</li>
+                    <li>Virginia Capital Semester</li>
+                    <li>Model United Nations</li> -->
+                  </nav>
                 </div>
               </div>
             </article>
@@ -229,6 +220,7 @@ export default {
           img: require('../assets/img/cardinal_solutions.jpg'),
           timeframe: 'Aug. 2016 - Present',
           title: 'Senior Consultant',
+          location: 'Raleigh, NC',
           responsibilities: [
             'do this........................................',
             'do that',
@@ -240,6 +232,7 @@ export default {
           img: require('../assets/img/cardinal_solutions.jpg'),
           timeframe: 'Aug. 2014 - Aug. 2016',
           title: 'Consultant',
+          location: 'Raleigh, NC',
           responsibilities: [
             'do this........................................',
             'do that',
@@ -251,6 +244,7 @@ export default {
           img: require('../assets/img/urs_corporation.jpg'),
           timeframe: 'Aug. 2013 - Aug. 2014',
           title: 'SharePoint / Web Developer',
+          location: 'Raleigh, NC',
           responsibilities: [
             'do this........................................',
             'do that',
@@ -262,6 +256,31 @@ export default {
           img: require('../assets/img/asurion.jpg'),
           timeframe: 'Apr. 2013 - Aug. 2013',
           title: 'SharePoint / Web Developer',
+          location: 'Nashville, TN',
+          responsibilities: [
+            'do this........................................',
+            'do that',
+            'etc'
+          ]
+        },
+        {
+          company: 'Asurion',
+          img: require('../assets/img/asurion.jpg'),
+          timeframe: 'Feb. 2012 - Apr. 2013',
+          title: 'Content Administrator',
+          location: 'Nashville, TN',
+          responsibilities: [
+            'do this........................................',
+            'do that',
+            'etc'
+          ]
+        },
+        {
+          company: 'Capital One',
+          img: require('../assets/img/capital_one.png'),
+          timeframe: 'Mar. 2011 - Feb. 2012',
+          title: 'Web Content Manager',
+          location: 'Richmond, VA',
           responsibilities: [
             'do this........................................',
             'do that',
