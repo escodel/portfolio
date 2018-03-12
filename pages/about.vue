@@ -9,7 +9,7 @@
       <div>
         <p class="has-text-centered">Statically generated site using:</p>
         <br>
-        <nav class="level">
+        <nav class="level container">
           <div class="level-item has-text-centered">
             <a href="https://vuejs.org" target="_blank">
               <figure class="image is-64x64">
