@@ -193,52 +193,49 @@
             <h2 class="title underline">
               Skills
             </h2>
-            <h3 class="subtitle has-text-centered">
-              HTML
-            </h3>
             <nav class="level">
               <div class="level-item has-text-centered">
-                <a href="https://vuejs.org" target="_blank">
+                <a href="#" target="_blank">
                   <figure class="image is-64x64">
-                    <img src="../assets/img/vue.png" title="Vue">
+                    <img src="../assets/img/jquery.png" title="jQuery">
                   </figure>
                   <p class="heading">
-                    Vue
+                    JQuery
                   </p>
                 </a>
               </div>
               <div class="level-item has-text-centered">
-                <a href="https://nuxtjs.org" target="_blank">
+                <a href="#" target="_blank">
                   <figure class="image is-64x64">
-                    <img src="../assets/img/nuxt.png" title="Nuxt.js">
+                    <img src="../assets/img/css3.png" title="CSS3">
                   </figure>
                   <p class="heading">
-                    Nuxt
+                    CSS3
                   </p>
                 </a>
               </div>
               <div class="level-item has-text-centered">
-                <a href="https://bulma.io" target="_blank">
+                <a href="#" target="_blank">
                   <figure class="image is-64x64">
-                    <img src="../assets/img/bulma.png" title="Bulma CSS">
+                    <img src="../assets/img/html5.png" title="HTML5">
                   </figure>
                   <p class="heading">
-                    Bulma
+                    HTML5
                   </p>
                 </a>
               </div>
             </nav>
-            <h3 class="subtitle has-text-centered">
+            <!-- <h3 class="subtitle has-text-centered">
               CSS
-            </h3>
+            </h3> -->
             <nav class="level">
               <div class="level-item has-text-centered">
-                <a href="https://vuejs.org" target="_blank">
+                <a href="#" target="_blank">
                   <figure class="image is-64x64">
-                    <img src="../assets/img/vue.png" title="Vue">
+                    <img src="../assets/img/sharepoint.png" title="SharePoint">
                   </figure>
                   <p class="heading">
-                    Vue
+                    SharePoint
                   </p>
                 </a>
               </div>
@@ -263,9 +260,6 @@
                 </a>
               </div>
             </nav>
-            <h3 class="subtitle has-text-centered">
-              JavaScript
-            </h3>
             <nav class="level">
               <div class="level-item has-text-centered">
                 <a href="https://vuejs.org" target="_blank">
