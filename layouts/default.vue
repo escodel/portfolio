@@ -1,12 +1,12 @@
 <template>
   <div>
-    <nav class="navbar">
+    <nav class="navbar is-primary">
       <div class="navbar-brand">
         <a class="navbar-item">
-          <img src="http://via.placeholder.com/150x50" alt="Eric Delia">
+          <img src="../assets/img/eric-delia-logo-cropped.png" alt="Eric Delia">
         </a>
 
-        <div class="navbar-burger" :class="{ 'is-active': showNav }" @click="showNav = !showNav">
+        <div class="navbar-burger highlight" :class="{ 'is-active': showNav }" @click="showNav = !showNav">
           <span></span>
           <span></span>
           <span></span>
