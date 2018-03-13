@@ -45,6 +45,14 @@ section {
   background: rgba(255, 255, 255, 0.7);
 }
 
+.bg-code {
+  background-image: url('./img/code.jpg');
+  background-position: center center;
+  background-repeat:  no-repeat;
+  background-attachment: fixed;
+  background-size:  cover;
+}
+
 .bg-raleigh {
   background-image: url('./img/raleigh_map_watercolor.jpeg');
   background-position: center center;

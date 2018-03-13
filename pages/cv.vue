@@ -71,38 +71,6 @@
                 </section>
               </div>
             </div>
-
-            <!-- <h2 class="title underline">
-              Skills
-            </h2>
-            <div class="tabs is-centered">
-              <ul>
-                <li v-for="tab in tabs" :key="tab.id" :class="{ 'is-active' : (tab.name === activeTab) }">
-                  <a @click.prevent="setActiveTab(tab.name)">{{ tab.name }}</a>
-                </li>
-              </ul>
-            </div>
-            <div v-if="(activeTab === 'HTML')">
-              <ul>
-                <li>HTML</li>
-                <li>Handlebars</li>
-              </ul>
-            </div>
-            <div v-if="(activeTab === 'CSS')">
-              <ul>
-                <li>CSS3</li>
-                <li>Bootstrap</li>
-                <li>Bulma</li>
-              </ul>
-            </div>
-            <div v-if="(activeTab === 'JavaScript')">
-              JavaScript
-            </div>
-            <div v-if="(activeTab === 'Other')">
-              <ul>
-                <li>Git</li>
-              </ul>
-            </div> -->
           </div>
 
           <div class="column is-narrow">
@@ -123,10 +91,10 @@
                     <em>Cum Laude</em>
                   </p>
                 </div>
-                <p class="field"><span class="tag is-dark">Virginia Capital Semester</span></p>
-                <p class="field"><span class="tag is-dark">Model United Nations</span></p>
-                <p class="field"><span class="tag is-dark">International Scholar Laureate Program</span></p>
-                <p class="field"><span class="tag is-dark">Golden Key Honour Society</span></p>
+                <p class="field"><span class="tag is-primary">Virginia Capital Semester</span></p>
+                <p class="field"><span class="tag is-primary">Model United Nations</span></p>
+                <p class="field"><span class="tag is-primary">International Scholar Laureate Program</span></p>
+                <p class="field"><span class="tag is-primary">Golden Key Honour Society</span></p>
               </div>
             </article>
             <br>
@@ -194,193 +162,73 @@
               Software
             </h2>
             <nav class="level">
-              <div class="level-item has-text-centered">
-                <a href="#" target="_blank">
+              <div class="level-item has-text-centered" v-for="technology in technologies.slice(0,3)" :key="technology.id">
+                <a :href="technology.link" target="_blank">
                   <figure class="image is-64x64">
-                    <img src="../assets/img/jquery.png" title="jQuery">
+                    <img :src="technology.logo" :title="technology.title">
                   </figure>
                   <p class="heading">
-                    JQuery
-                  </p>
-                </a>
-              </div>
-              <div class="level-item has-text-centered">
-                <a href="#" target="_blank">
-                  <figure class="image is-64x64">
-                    <img src="../assets/img/css3.png" title="CSS3">
-                  </figure>
-                  <p class="heading">
-                    CSS3
-                  </p>
-                </a>
-              </div>
-              <div class="level-item has-text-centered">
-                <a href="#" target="_blank">
-                  <figure class="image is-64x64">
-                    <img src="../assets/img/html5.png" title="HTML5">
-                  </figure>
-                  <p class="heading">
-                    HTML5
+                    {{ technology.displayName }}
                   </p>
                 </a>
               </div>
             </nav>
             <nav class="level">
-              <div class="level-item has-text-centered">
-                <a href="#" target="_blank">
+              <div class="level-item has-text-centered" v-for="technology in technologies.slice(3,6)" :key="technology.id">
+                <a :href="technology.link" target="_blank">
                   <figure class="image is-64x64">
-                    <img src="../assets/img/sharepoint.png" title="SharePoint">
+                    <img :src="technology.logo" :title="technology.title">
                   </figure>
                   <p class="heading">
-                    SharePoint
-                  </p>
-                </a>
-              </div>
-              <div class="level-item has-text-centered">
-                <a href="#" target="_blank">
-                  <figure class="image is-64x64">
-                    <img src="../assets/img/bootstrap.png" title="Bootstrap">
-                  </figure>
-                  <p class="heading">
-                    Bootstrap
-                  </p>
-                </a>
-              </div>
-              <div class="level-item has-text-centered">
-                <a href="#" target="_blank">
-                  <figure class="image is-64x64">
-                    <img src="../assets/img/git.png" title="Git">
-                  </figure>
-                  <p class="heading">
-                    Git
+                    {{ technology.displayName }}
                   </p>
                 </a>
               </div>
             </nav>
             <nav class="level">
-              <div class="level-item has-text-centered">
-                <a href="https://vuejs.org" target="_blank">
+              <div class="level-item has-text-centered" v-for="technology in technologies.slice(6,9)" :key="technology.id">
+                <a :href="technology.link" target="_blank">
                   <figure class="image is-64x64">
-                    <img src="../assets/img/vue.png" title="Vue">
+                    <img :src="technology.logo" :title="technology.title">
                   </figure>
                   <p class="heading">
-                    Vue
-                  </p>
-                </a>
-              </div>
-              <div class="level-item has-text-centered">
-                <a href="https://nuxtjs.org" target="_blank">
-                  <figure class="image is-64x64">
-                    <img src="../assets/img/nuxt.png" title="Nuxt.js">
-                  </figure>
-                  <p class="heading">
-                    Nuxt
-                  </p>
-                </a>
-              </div>
-              <div class="level-item has-text-centered">
-                <a href="https://bulma.io" target="_blank">
-                  <figure class="image is-64x64">
-                    <img src="../assets/img/bulma.png" title="Bulma CSS">
-                  </figure>
-                  <p class="heading">
-                    Bulma
+                    {{ technology.displayName }}
                   </p>
                 </a>
               </div>
             </nav>
             <nav class="level">
-              <div class="level-item has-text-centered">
-                <a href="#" target="_blank">
+              <div class="level-item has-text-centered" v-for="technology in technologies.slice(9,12)" :key="technology.id">
+                <a :href="technology.link" target="_blank">
                   <figure class="image is-64x64">
-                    <img src="../assets/img/nodejs.png" title="NodeJS">
+                    <img :src="technology.logo" :title="technology.title">
                   </figure>
                   <p class="heading">
-                    Node
-                  </p>
-                </a>
-              </div>
-              <div class="level-item has-text-centered">
-                <a href="#" target="_blank">
-                  <figure class="image is-64x64">
-                    <img src="../assets/img/npm.png" title="npm">
-                  </figure>
-                  <p class="heading">
-                    NPM
-                  </p>
-                </a>
-              </div>
-              <div class="level-item has-text-centered">
-                <a href="#" target="_blank">
-                  <figure class="image is-64x64">
-                    <img src="../assets/img/parceljs.jpg" title="Parcel">
-                  </figure>
-                  <p class="heading">
-                    Parcel
+                    {{ technology.displayName }}
                   </p>
                 </a>
               </div>
             </nav>
             <nav class="level">
-              <div class="level-item has-text-centered">
-                <a href="#" target="_blank">
+              <div class="level-item has-text-centered" v-for="technology in technologies.slice(12,15)" :key="technology.id">
+                <a :href="technology.link" target="_blank">
                   <figure class="image is-64x64">
-                    <img src="../assets/img/gulp.png" title="Gulp">
+                    <img :src="technology.logo" :title="technology.title">
                   </figure>
                   <p class="heading">
-                    Gulp
-                  </p>
-                </a>
-              </div>
-              <div class="level-item has-text-centered">
-                <a href="#" target="_blank">
-                  <figure class="image is-64x64">
-                    <img src="../assets/img/js.png" title="ES6+">
-                  </figure>
-                  <p class="heading">
-                    ES6+
-                  </p>
-                </a>
-              </div>
-              <div class="level-item has-text-centered">
-                <a href="#" target="_blank">
-                  <figure class="image is-64x64">
-                    <img src="../assets/img/babel.png" title="Babel">
-                  </figure>
-                  <p class="heading">
-                    Babel
+                    {{ technology.displayName }}
                   </p>
                 </a>
               </div>
             </nav>
             <nav class="level">
-              <div class="level-item has-text-centered">
-                <a href="#" target="_blank">
+              <div class="level-item has-text-centered" v-for="technology in technologies.slice(15,18)" :key="technology.id">
+                <a :href="technology.link" target="_blank">
                   <figure class="image is-64x64">
-                    <img src="../assets/img/webpack.svg" title="Webpack">
+                    <img :src="technology.logo" :title="technology.title">
                   </figure>
                   <p class="heading">
-                    Webpack
-                  </p>
-                </a>
-              </div>
-              <div class="level-item has-text-centered">
-                <a href="#" target="_blank">
-                  <figure class="image is-64x64">
-                    <img src="../assets/img/sass.png" title="Sass">
-                  </figure>
-                  <p class="heading">
-                    Sass
-                  </p>
-                </a>
-              </div>
-              <div class="level-item has-text-centered">
-                <a href="#" target="_blank">
-                  <figure class="image is-64x64">
-                    <img src="../assets/img/vscode.svg" title="Visual Studio">
-                  </figure>
-                  <p class="heading">
-                    VS
+                    {{ technology.displayName }}
                   </p>
                 </a>
               </div>
@@ -396,21 +244,6 @@
 export default {
   data() {
     return {
-      tabs: [
-        {
-          name: 'HTML'
-        },
-        {
-          name: 'CSS'
-        },
-        {
-          name: 'JavaScript'
-        },
-        {
-          name: 'Other'
-        }
-      ],
-      activeTab: null,
       workHistories: [
         {
           company: 'Cardinal Solutions',
@@ -490,15 +323,117 @@ export default {
             'etc'
           ]
         },
+      ],
+      technologies: [
+        {
+          displayName: 'HTML5',
+          title: 'HTML5',
+          link: '#',
+          logo: require('../assets/img/html5.png')
+        },
+        {
+          displayName: 'CSS3',
+          title: 'CSS3',
+          link: '#',
+          logo: require('../assets/img/css3.png')
+        },
+        {
+          displayName: 'ES6+',
+          title: 'JavaScript',
+          link: '#',
+          logo: require('../assets/img/js.png')
+        },
+        {
+          displayName: 'Vue',
+          title: 'Vue',
+          link: '#',
+          logo: require('../assets/img/vue.png')
+        },
+        {
+          displayName: 'Nuxt',
+          title: 'Nuxt',
+          link: '#',
+          logo: require('../assets/img/nuxt.png')
+        },
+        {
+          displayName: 'Bulma',
+          title: 'Bulma',
+          link: '#',
+          logo: require('../assets/img/bulma.png')
+        },
+        {
+          displayName: 'Node',
+          title: 'Node',
+          link: '#',
+          logo: require('../assets/img/nodejs.png')
+        },
+        {
+          displayName: 'Npm',
+          title: 'npm',
+          link: '#',
+          logo: require('../assets/img/npm.png')
+        },
+        {
+          displayName: 'Git',
+          title: 'Git',
+          link: '#',
+          logo: require('../assets/img/git.png')
+        },
+        {
+          displayName: 'Webpack',
+          title: 'Webpack',
+          link: '#',
+          logo: require('../assets/img/webpack.svg')
+        },
+        {
+          displayName: 'Parcel',
+          title: 'Parcel',
+          link: '#',
+          logo: require('../assets/img/parceljs.jpg')
+        },
+        {
+          displayName: 'Gulp',
+          title: 'Gulp',
+          link: '#',
+          logo: require('../assets/img/gulp.png')
+        },
+        {
+          displayName: 'Bootstrap',
+          title: 'Bootstrap',
+          link: '#',
+          logo: require('../assets/img/bootstrap.png')
+        },
+        {
+          displayName: 'Sass',
+          title: 'Sass',
+          link: '#',
+          logo: require('../assets/img/sass.png')
+        },
+        {
+          displayName: 'jQuery',
+          title: 'jQuery',
+          link: '#',
+          logo: require('../assets/img/jquery.png')
+        },
+        {
+          displayName: 'Babel',
+          title: 'Babel',
+          link: '#',
+          logo: require('../assets/img/babel.png')
+        },
+        {
+          displayName: 'SharePoint',
+          title: 'SharePoint',
+          link: '#',
+          logo: require('../assets/img/sharepoint.png')
+        },
+        {
+          displayName: 'VS',
+          title: 'Visual Studio',
+          link: '#',
+          logo: require('../assets/img/vscode.svg')
+        }
       ]
-    }
-  },
-  mounted() {
-    this.activeTab = this.tabs[0].name
-  },
-  methods: {
-    setActiveTab(name) {
-      this.activeTab = name
     }
   }
 }

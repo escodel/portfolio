@@ -4,10 +4,8 @@
     <div class="hero is-primary">
       <div class="hero-body">
         <article class="media container">
-          <figure class="media-left">
-            <p class="image is-96x96">
-              <img src="../assets/img/escodel-527.png" class="img-circular">
-            </p>
+          <figure class="media-left image is-96x96">
+            <img src="../assets/img/escodel-527.png" class="img-circular">
           </figure>
           <div class="media-content">
             <div class="content">
@@ -26,6 +24,13 @@
     <div class="hero is-light">
       <div class="hero-body is-size-5 container">
         Senior consultant with seven years' experience developing for the web, 10+ years in a variety of industries. Travels have included UI/UX design, web/enterprise content management, technical/creative writing, and building brand awareness.
+      </div>
+    </div>
+
+    <div class="hero bg-code">
+      <div class="hero-body">
+        <section></section>
+        <section></section>
       </div>
     </div>
 
