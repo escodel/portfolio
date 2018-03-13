@@ -27,7 +27,7 @@
       </div>
     </div>
 
-    <div class="hero bg-code">
+    <div class="hero bg bg-code">
       <div class="hero-body">
         <section></section>
         <section></section>

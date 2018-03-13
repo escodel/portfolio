@@ -55,7 +55,7 @@
                 </div>
               </div>
               <hr>
-              <div :class="workHistory.background">
+              <div class="bg" :class="workHistory.background">
                 <section class="overlay-white">
                   <article class="media">
                     <div class="content">
