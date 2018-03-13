@@ -25,6 +25,10 @@ $colors: map-merge($colors, $addColors);
 
 @import '~bulma/bulma';
 
+.navbar-brand > a.navbar-item:hover {
+  background-color: transparent !important;
+}
+
 section {
   padding: 3rem 1.5rem;
 }

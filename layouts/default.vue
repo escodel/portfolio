@@ -65,12 +65,12 @@
     data() {
       return {
         showNav: false,
-        activeItem: ''
+        activeItem: '/'
       }
     },
     mounted() {
       let route = this.$route.path
-      let navItem = document.querySelector('[href="' + route + '"]')
+      let navItem = document.querySelector('.navbar-start > [href="' + route + '"]')
       navItem.classList.add('is-active')
     }
   }
