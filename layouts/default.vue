@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="site">
     <nav class="navbar is-primary">
       <div class="navbar-brand">
         <a class="navbar-item" href="/">
@@ -56,7 +56,39 @@
         </a>
       </div>
     </nav>
-    <nuxt/>
+    <nuxt class="site-content" />
+    <footer class="footer">
+      <div class="container">
+        <div class="has-text-centered">
+          <img class="footer-logo" src="../assets/img/eric-delia-logo-cropped.png" alt="Eric Delia">
+          <div class="footer-links-padding">
+            <a href="https://github.com/escodel" target="_blank">
+              <span class="icon">
+                <i class="fa fa-github"></i>
+              </span>
+            </a>
+            <a href="https://www.linkedin.com/in/ericdelia" target="_blank">
+              <span class="icon">
+                <i class="fa fa-linkedin"></i>
+              </span>
+            </a>
+            <a href="https://twitter.com/metkovic_" target="_blank">
+              <span class="icon">
+                <i class="fa fa-twitter"></i>
+              </span>
+            </a>
+            <a href="https://soundcloud.com/metkovic" target="_blank">
+              <span class="icon">
+                <i class="fa fa-soundcloud"></i>
+              </span>
+            </a>
+          </div>
+          <div class="is-size-7">
+            &copy;2018
+          </div>
+        </div>
+      </div>
+    </footer>
   </div>
 </template>
 

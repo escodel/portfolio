@@ -25,8 +25,30 @@ $colors: map-merge($colors, $addColors);
 
 @import '~bulma/bulma';
 
+.site {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.site-content {
+  flex: 1;
+}
+
+.navbar-brand {
+  min-width: 158px;
+}
+
 .navbar-brand > a.navbar-item:hover {
   background-color: transparent !important;
+}
+
+.footer-logo {
+  width: 20%;
+}
+
+.footer-links-padding {
+  padding: 1rem 1rem 2.5rem;
 }
 
 section {
