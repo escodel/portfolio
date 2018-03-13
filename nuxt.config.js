@@ -3,7 +3,7 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: 'portfolio',
+    title: 'Eric Delia',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -41,6 +41,27 @@ module.exports = {
           exclude: /(node_modules)/
         })
       }
+    },
+    extend (config, { isDev, isClient }) {
+      config.module.rules.forEach((rule) => {
+        if (rule.test.toString() === '/\\.(png|jpe?g|gif|svg)$/') {
+          rule.use = [
+            {
+              loader: 'url-loader',
+              options: {
+                limit: 1000,
+                name: 'img/[name].[hash:7].[ext]'
+              }
+            },
+            {
+              loader: 'image-webpack-loader'
+            }
+          ]
+          delete rule.loader;
+          delete rule.options;
+        }
+      })
     }
-  }
+  },
+  vendor: ['image-webpack-loader']
 }
