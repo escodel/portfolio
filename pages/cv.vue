@@ -57,17 +57,13 @@
               <hr>
               <div :class="workHistory.background">
                 <section class="overlay-white">
-              <article class="media">
-                <div class="media-content">
-                  <nav class="level">
-                    <section class="level-left content">
+                  <article class="media">
+                    <div class="content">
                       <ul class="is-marginless">
                         <li v-for="responsibility in workHistory.responsibilities" :key="responsibility.id">{{ responsibility }}</li>
                       </ul>
-                    </section>
-                  </nav>
-                </div>
-              </article>
+                    </div>
+                  </article>
                 </section>
               </div>
             </div>
@@ -253,9 +249,9 @@ export default {
           location: 'Raleigh, NC',
           background: 'bg-raleigh',
           responsibilities: [
-            'do this........................................',
-            'do that',
-            'etc'
+            'Lead front-end developer on public-facing portal for North Carolina driver services',
+            'Design lead for state-wide driver services applications',
+            'Built weather-based map for counties in North Carolina facing severe weather events in SharePoint'
           ]
         },
         {
@@ -266,9 +262,10 @@ export default {
           location: 'Raleigh, NC',
           background: 'bg-raleigh',
           responsibilities: [
-            'do this........................................',
-            'do that',
-            'etc'
+            'Built custom UI and branding for aircraft dealer portal on top of SharePoint with Bootstrap',
+            'Developed Bootstrap-based style guide for consistency across applications for aircraft manufacturer',
+            'Implemented custom forms solution for financial institution in SharePoint',
+            'Converted investment application from Adobe Flex to Angular 1.4'
           ]
         },
         {
@@ -279,9 +276,9 @@ export default {
           location: 'Raleigh, NC',
           background: 'bg-raleigh',
           responsibilities: [
-            'do this........................................',
-            'do that',
-            'etc'
+            'Managed content and information architecture for transportation partnership between federal and state agencies, public and private stakeholders',
+            'Administered the department help desk ticketing system',
+            'Created custom-coded dashboard for tracking budget, status and documents for SharePoint projects'
           ]
         },
         {
@@ -292,9 +289,9 @@ export default {
           location: 'Nashville, TN',
           background: 'bg-nashville',
           responsibilities: [
-            'do this........................................',
-            'do that',
-            'etc'
+            'Owned design and direction of corporate intranet, team sites and mysites',
+            'Partnered with communications team to simplify SharePoint development projects and drive user adoption',
+            'Met with executive teams for brand and messaging strategy sessions'
           ]
         },
         {
@@ -305,24 +302,43 @@ export default {
           location: 'Nashville, TN',
           background: 'bg-nashville',
           responsibilities: [
-            'do this........................................',
-            'do that',
-            'etc'
+            'Developed custom-branded IT department hub for enterprise and web content management',
+            'Constructed custom front-end solutions for tracking metrics, storing and organizing documents, project management and reference materials',
+            'Assembled committee of content owners to adhere to an information lifecycle with retention policies',
+            'Created custom ticketing solution for work intake and tracking for the Content Management team',
+            'Trained new hires to complete requests independently'
           ]
         },
         {
           company: 'Capital One',
           img: require('../assets/img/capital_one.png'),
           timeframe: 'Mar. 2011 - Feb. 2012',
-          title: 'Web Content Manager',
+          title: 'Web Content Manager (contract)',
           location: 'Richmond, VA',
           background: 'bg-richmond',
           responsibilities: [
-            'do this........................................',
-            'do that',
-            'etc'
+            'Author web-based content for agents in multiple channels servicing card customers',
+            'Delivered training products for agent groups in the United States, Canada, Nicaragua and the Philippines',
+            'Responsible for high-priority projects for payment systems, third party debt management and collections',
+            'Trained new content managers to handle publishing urgent content to manage risk events'
           ]
         },
+        {
+          company: 'Virginia Department of Labor and Industry',
+          img: require('../assets/img/seal_of_virginia.png'),
+          timeframe: 'May 2008 - Mar. 2011',
+          title: 'Policy Analyst',
+          location: 'Richmond, VA',
+          background: 'bg-richmond',
+          responsibilities: [
+            'Government liaison and Commissioner\'s advisor to agency programs',
+            'Public information officer handling press releases, public inquiries, television and print interviews',
+            'Coordinated and published department\'s annual report for three years using Adobe Illustrator',
+            'Introduced monthly newsletter for all agency staff based on executive reports',
+            'Speechwriting and presentation production for commissioner on topics such as workplace fatality prevention, child labor, regulatory review and crane safety',
+            'Content owner for programs on agency website'
+          ]
+        }
       ],
       technologies: [
         {

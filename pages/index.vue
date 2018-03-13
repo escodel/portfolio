@@ -45,7 +45,7 @@
               Strategy
             </h2>
             <p class="has-text-justified">
-              From gathering requirements to guiding junior team members to leading strategy for corporate intranet to development process improvement for large organizations, it all begins with a roadmap.
+              From gathering requirements to guiding and training junior team members to leading strategy for corporate intranet to development process improvement for large organizations, it all begins with a roadmap.
             </p>
           </section>
         </div>
