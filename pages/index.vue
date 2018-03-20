@@ -23,7 +23,7 @@
 
     <div class="hero is-light">
       <div class="hero-body is-size-5 container">
-        Senior consultant with seven years' experience developing for the web, 10+ years in a variety of industries. Travels have included UI/UX design, web/enterprise content management, technical/creative writing, and building brand awareness.
+        Senior consultant with seven years of experience developing for the web, 10+ years in a variety of industries. Travels have included UI/UX design, web/enterprise content management, technical/creative writing, and building brand awareness.
       </div>
     </div>
 
