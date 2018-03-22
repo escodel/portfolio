@@ -21,12 +21,6 @@
           <a class="navbar-item" href="/cv">
             CV
           </a>
-          <!-- <a class="navbar-item" href="/music">
-            Music
-          </a>
-          <a class="navbar-item" href="/blog">
-            Blog
-          </a> -->
           <a class="navbar-item" href="/about">
             About
           </a>
@@ -44,14 +38,9 @@
             <i class="fa fa-linkedin"></i>
           </span>
         </a>
-        <a class="navbar-item" href="https://twitter.com/metkovic_" target="_blank">
+        <a class="navbar-item" href="mailto:escodel@gmail.com">
           <span class="icon">
-            <i class="fa fa-twitter"></i>
-          </span>
-        </a>
-        <a class="navbar-item" href="https://soundcloud.com/metkovic" target="_blank">
-          <span class="icon">
-            <i class="fa fa-soundcloud"></i>
+            <i class="fa fa-envelope"></i>
           </span>
         </a>
       </div>
@@ -72,19 +61,14 @@
                 <i class="fa fa-linkedin"></i>
               </span>
             </a>
-            <a href="https://twitter.com/metkovic_" target="_blank">
+            <a href="mailto:escodel@gmail.com">
               <span class="icon">
-                <i class="fa fa-twitter"></i>
-              </span>
-            </a>
-            <a href="https://soundcloud.com/metkovic" target="_blank">
-              <span class="icon">
-                <i class="fa fa-soundcloud"></i>
+                <i class="fa fa-envelope"></i>
               </span>
             </a>
           </div>
           <div class="is-size-7">
-            &copy;2018
+            &copy;{{ currentYear }} Eric Delia
           </div>
         </div>
       </div>
@@ -97,7 +81,9 @@
     data() {
       return {
         showNav: false,
-        activeItem: '/'
+        hideEmail: true,
+        activeItem: '/',
+        currentYear: ''
       }
     },
     mounted() {
@@ -114,6 +100,12 @@
           }
         });
       }
+    },
+    created() {
+      let date = new Date()
+      let year = date.getFullYear()
+
+      this.currentYear = year
     }
   }
 </script>

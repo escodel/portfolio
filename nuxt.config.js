@@ -28,6 +28,9 @@ module.exports = {
   ** Customize the progress bar color
   */
   loading: { color: '#3B8070' },
+  modules: [
+    '@nuxtjs/markdownit'
+  ],
   /*
   ** Build configuration
   */
@@ -41,6 +44,15 @@ module.exports = {
           enforce: 'pre',
           test: /\.(js|vue)$/,
           loader: 'eslint-loader',
+          exclude: /(node_modules)/
+        })
+      }
+    },
+    extend (config, { isDev, isClient }) {
+      if (isDev && isClient) {
+        config.module.rules.push({
+          test: /\.md$/,
+          loader: 'vue-markdown-loader',
           exclude: /(node_modules)/
         })
       }

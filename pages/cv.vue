@@ -7,9 +7,7 @@
             Eric Delia
           </h1>
           <h2 class="subtitle">
-            <a href="mailto:escodel@gmail.com">
-              escodel@gmail.com
-            </a>
+            Cary, North Carolina
           </h2>
         </div>
       </div>
