@@ -31,6 +31,9 @@ module.exports = {
   modules: [
     '@nuxtjs/markdownit'
   ],
+  plugins: [
+    { src: '~plugins/ga.js', ssr: false }
+  ],
   /*
   ** Build configuration
   */
