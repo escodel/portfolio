@@ -86,7 +86,7 @@
         currentYear: ''
       }
     },
-    mounted() {
+    created() {
       let route = this.$route.path
       let navItem = document.querySelector('.navbar-start > [href="' + route + '"]')
       navItem.classList.add('is-active')

@@ -1,0 +1,66 @@
+<template>
+  <section class="util__container">
+    <div v-editable="story.content" class="blog">
+      <h1>{{ story.content.name }}</h1>
+      <div class="blog__body" v-html="body">
+      </div>
+    </div>
+  </section>
+</template>
+
+<script>
+import marked from 'marked'
+import Default from '~/layouts/default.vue'
+
+export default {
+  data () {
+    return { story: { content: { body: '' } } }
+  },
+  components: {
+    Default
+  },
+  computed: {
+    body () {
+      return marked(this.story.content.body)
+    }
+  },
+  mounted () {
+    this.$storyblok.init()
+    this.$storyblok.on('change', () => {
+      location.reload(true)
+    })
+    this.$storyblok.on('published', () => {
+      location.reload(true)
+    })
+  },
+  asyncData (context) {
+    let version = context.query._storyblok || context.isDev ? 'draft' : 'published'
+    let endpoint = `cdn/stories/blog/${context.params.slug}`
+
+    return context.app.$storyapi.get(endpoint, {
+      version: version
+    }).then((res) => {
+      return res.data
+    }).catch((res) => {
+      context.error({ statusCode: res.response.status, message: res.response.data })
+    })
+  }
+}
+</script>
+
+<style lang="scss">
+.blog {
+  padding: 0 20px;
+  max-width: 600px;
+  margin: 40px auto 100px;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.blog__body {
+  line-height: 1.6;
+}
+</style>
