@@ -88,4 +88,13 @@ export default {
   .card-header-title {
     padding: 0;
   }
+  .level {
+    margin-bottom: 0 !important;
+  }
+  @media screen and (max-width: 768px) {
+    .level-left + .level-right {
+      margin-top: 0;
+    }
+  }
+
 </style>

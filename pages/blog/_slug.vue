@@ -1,8 +1,8 @@
 <template>
   <section class="util__container">
-    <div v-editable="story.content" class="blog">
+    <div v-editable="story.content" class="blog content">
       <h1>{{ story.content.name }}</h1>
-      <div class="blog__body" v-html="body">
+      <div v-html="body">
       </div>
     </div>
   </section>
