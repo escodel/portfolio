@@ -85,5 +85,5 @@ module.exports = {
       })
     }
   },
-  vendor: ['image-webpack-loader']
+  vendor: ['image-webpack-loader', 'moment']
 }

@@ -1,23 +1,56 @@
 <template>
-  <section class="util__container">
-    <div v-for="blogPost in data.stories" :key="blogPost.content._uid" class="blog__overview">
-      <h2>
-        <nuxt-link class="blog__detail-link" :to="'/' + blogPost.full_slug">
-          {{ blogPost.content.name }}
-        </nuxt-link>
-      </h2>
-      <small>
-        {{ blogPost.published_at }}
-      </small>
-      <p>
-        {{ blogPost.content.intro }}
-      </p>
+  <div>
+    <div class="hero is-primary">
+      <div class="hero-body">
+        <h1 class="title container">Blog</h1>
+      </div>
     </div>
-  </section>
+    <section class="container">
+      <div v-for="blogPost in data.stories" :key="blogPost.content._uid" class="card">
+        <header class="card-header level">
+          <div class="card-header-title level-left">
+            <p class="level-item">
+              <nuxt-link :to="'/' + blogPost.full_slug">
+                {{ blogPost.content.name }}
+              </nuxt-link>
+            </p>
+          </div>
+          <div class="level-right">
+            <p class="level-item">
+              <span v-text="formatDate(blogPost.published_at)"></span>
+            </p>
+          </div>
+        </header>
+        <div class="card-content">
+          <div class="content">
+            {{ blogPost.content.intro }}
+          </div>
+          <!-- <article class="media">
+            <div class="media-content">
+              <h2 class="title">
+                <nuxt-link class="blog__detail-link" :to="'/' + blogPost.full_slug">
+                  {{ blogPost.content.name }}
+                </nuxt-link>
+              </h2>
+              <p>
+                {{ blogPost.content.intro }}
+              </p>
+            </div>
+            <small class="media-right">
+              <span v-text="formatDate(blogPost.published_at)"></span>
+              {{ blogPost.published_at }}
+              {{ formatDate(blogPost.published_at) }}
+            </small>
+          </article> -->
+        </div>
+      </div>
+    </section>
+  </div>
 </template>
 
 <script>
 import Default from '~/layouts/default.vue'
+import moment from 'moment'
 
 export default {
   data () {
@@ -37,22 +70,22 @@ export default {
     }).catch((res) => {
       context.error({ statusCode: res.response.status, message: res.response.data })
     })
+  },
+  methods: {
+    formatDate: function (value) {
+      if (value) {
+        return moment(String(value)).format('MM/DD/YYYY hh:mma')
+      }
+    }
   }
 }
 </script>
 
 <style lang="scss">
-.blog__overview {
-  padding: 0 20px;
-  max-width: 600px;
-  margin: 40px auto 60px;
-
-  p {
-    line-height: 1.6;
+  .card-header {
+    padding: 1rem;
   }
-}
-
-.blog__detail-link {
-  color: #000;
-}
+  .card-header-title {
+    padding: 0;
+  }
 </style>
