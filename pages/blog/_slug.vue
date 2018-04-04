@@ -14,6 +14,14 @@
       </div>
       <div v-html="body" class="has-text-justified">
       </div>
+      <div class="tags">
+        <span v-for="tag in story.tag_list" :key="tag.id" class="tag is-primary">
+            <nuxt-link :to="'/' + blogPost.full_slug">
+              {{ blogPost.content.name }}
+            </nuxt-link>
+          <a href="#" class="has-text-white">{{ tag }}</a>
+        </span>
+      </div>
     </div>
   </section>
 </template>
@@ -52,7 +60,10 @@ export default {
       return false
     },
     image_caption () {
-      return this.story.image_caption
+      return this.story.content.image_caption
+    },
+    tag_list () {
+      return this.story.tag_list
     }
   },
   mounted () {
@@ -66,6 +77,7 @@ export default {
 
     this.image()
     this.image_caption()
+    this.tag_list()
   },
   asyncData (context) {
     let version = context.query._storyblok || context.isDev ? 'draft' : 'published'
@@ -108,5 +120,9 @@ export default {
 
 .blog__body {
   line-height: 1.6;
+}
+
+.tags {
+  margin-top: 3rem;
 }
 </style>

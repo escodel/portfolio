@@ -25,23 +25,13 @@
           <div class="content">
             {{ blogPost.content.intro }}
           </div>
-          <!-- <article class="media">
-            <div class="media-content">
-              <h2 class="title">
-                <nuxt-link class="blog__detail-link" :to="'/' + blogPost.full_slug">
-                  {{ blogPost.content.name }}
-                </nuxt-link>
-              </h2>
-              <p>
-                {{ blogPost.content.intro }}
-              </p>
-            </div>
-            <small class="media-right">
-              <span v-text="formatDate(blogPost.published_at)"></span>
-              {{ blogPost.published_at }}
-              {{ formatDate(blogPost.published_at) }}
-            </small>
-          </article> -->
+          <div class="card-footer">
+            <span class="tag is-primary" v-for="tag in blogPost.tag_list" :key="tag.id">
+              <nuxt-link :to="'/' + blogPost.full_slug">
+                {{ tag }}
+              </nuxt-link>
+            </span>
+          </div>
         </div>
       </div>
     </section>
@@ -64,7 +54,8 @@ export default {
 
     return context.app.$storyapi.get('cdn/stories', {
       version: version,
-      starts_with: 'blog'
+      starts_with: 'blog',
+      per_page: 10
     }).then((res) => {
       return res
     }).catch((res) => {
@@ -82,6 +73,9 @@ export default {
 </script>
 
 <style lang="scss">
+  .card-footer {
+    padding-top: 1rem;
+  }
   .card-header {
     padding: 1rem;
   }
