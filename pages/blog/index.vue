@@ -27,9 +27,9 @@
           </div>
           <div class="card-footer">
             <span class="tag is-primary" v-for="tag in blogPost.tag_list" :key="tag.id">
-              <nuxt-link :to="'/' + blogPost.full_slug">
+              <a v-on:click="filterByTag(tag)">
                 {{ tag }}
-              </nuxt-link>
+              </a>
             </span>
           </div>
         </div>
