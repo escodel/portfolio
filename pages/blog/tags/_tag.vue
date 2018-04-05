@@ -2,11 +2,7 @@
   <div>
     <div class="hero is-primary">
       <div class="hero-body">
-        <h1 class="title container">
-          <nuxt-link :to="'/blog'">
-            Blog
-          </nuxt-link>
-        </h1>
+        <h1 class="title container">Blog</h1>
       </div>
     </div>
     <section class="container">
@@ -37,10 +33,6 @@
             </span>
           </div>
         </div>
-
-      </div>
-      <div v-if="total > 1">
-        <span class="">next >></span>
       </div>
     </section>
   </div>
@@ -59,11 +51,13 @@ export default {
   },
   asyncData (context) {
     let version = context.query._storyblok || context.isDev ? 'draft' : 'published'
+    let tag = context.route.params.tag
 
     return context.app.$storyapi.get('cdn/stories', {
       version: version,
       starts_with: 'blog',
-      per_page: 1
+      per_page: 10,
+      with_tag: tag
     }).then((res) => {
       return res
     }).catch((res) => {

@@ -16,10 +16,9 @@
       </div>
       <div class="tags">
         <span v-for="tag in story.tag_list" :key="tag.id" class="tag is-primary">
-            <nuxt-link :to="'/' + blogPost.full_slug">
-              {{ blogPost.content.name }}
+            <nuxt-link :to="'/blog/tags/' + tag">
+              {{ tag }}
             </nuxt-link>
-          <a href="#" class="has-text-white">{{ tag }}</a>
         </span>
       </div>
     </div>
