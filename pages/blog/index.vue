@@ -10,7 +10,7 @@
       </div>
     </div>
     <section class="container">
-      <div v-for="blogPost in data.stories" :key="blogPost.content._uid" class="card">
+      <div v-for="blogPost in data.stories" :key="blogPost.content._uid" class="card" v-on:update-blog="updateBlogIndex($event)">
         <header class="card-header level">
           <div class="card-header-title level-left">
             <p class="level-item">
@@ -21,7 +21,7 @@
           </div>
           <div class="level-right">
             <p class="level-item">
-              <span v-text="formatDate(blogPost.published_at)"></span>
+              <small v-text="formatDate(blogPost.published_at)"></small>
             </p>
           </div>
         </header>
@@ -46,7 +46,12 @@
 <script>
 import Default from '~/layouts/default.vue'
 import Pagination from '~/components/pagination.vue'
+import StoryblokClient from 'storyblok-js-client'
 import moment from 'moment'
+
+var Storyblok = new StoryblokClient({
+  accessToken: 'FBRfpdyqPBt0xJrHc47QSQtt'
+})
 
 export default {
   data () {
@@ -74,14 +79,32 @@ export default {
   methods: {
     formatDate: function (value) {
       if (value) {
-        return moment(String(value)).format('MM/DD/YYYY hh:mma')
+        return moment(String(value)).format('MM/DD/YYYY h:mma')
       }
+    },
+    updateBlogIndex: function (value) {
+      Storyblok.get('cdn/stories', {
+        starts_with: 'blog',
+        per_page: 1,
+        page: value
+      }).then((res) => {
+        this.data.stories = res.data.stories
+      })
+    }
+  },
+  watch: {
+    '$route': function() {
+      this.page = this.$route.query.page
+      this.updateBlogIndex(this.$route.query.page)
     }
   }
 }
 </script>
 
 <style lang="scss">
+  .card {
+    margin-bottom: 1rem;
+  }
   .card-footer {
     padding-top: 1rem;
   }
@@ -99,5 +122,4 @@ export default {
       margin-top: 0;
     }
   }
-
 </style>

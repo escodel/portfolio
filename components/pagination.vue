@@ -1,12 +1,10 @@
 <template>
-  <div>
-    <h1>Total pages: {{ total }}</h1>
-    <span v-for="page in numberOfPages" :key="page.id">
-      <a class="button" :href="'/blog?page=' + page">
+  <div class="pagination-bar">
+    <span v-if="numberOfPages > 1" v-for="page in numberOfPages" :key="page.id">
+      <nuxt-link class="button" :to="'/blog?page=' + page" v-on:click.native="$emit('update-blog', page)">
         {{ page }}
-      </a>
+      </nuxt-link>
     </span>
-    <a class="button" v-if="numberOfPages > 1">NEXT</a>
   </div>
 </template>
 
@@ -14,7 +12,6 @@
 export default {
   data () {
     return {
-      nextPage: null,
       currentPage: 1,
       numberOfPages: ''
     }
@@ -35,9 +32,20 @@ export default {
       this.currentPage = this.$route.query.page || 1
     }
   },
+  watch: {
+    '$route': function () {
+      this.setCurrentPage()
+    }
+  },
   props: [
     'total',
     'perPage'
   ]
 }
 </script>
+
+<style lang="scss">
+  .pagination-bar {
+    margin-top: 3rem;
+  }
+</style>
