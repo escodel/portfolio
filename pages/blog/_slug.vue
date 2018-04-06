@@ -7,12 +7,12 @@
           <div class="content">
             <img :src="story.content.image">
             <div class="has-text-right">
-              <small><em>{{ story.content.image_caption }}</em></small>
+              <small><em v-html="image_caption"></em></small>
             </div>
           </div>
         </div>
       </div>
-      <div v-html="body" class="has-text-justified">
+      <div v-html="body" class="has-text-justified dropcap">
       </div>
       <div class="tags">
         <span v-for="tag in story.tag_list" :key="tag.id" class="tag is-primary">
@@ -48,6 +48,9 @@ export default {
   computed: {
     body () {
       return marked(this.story.content.body)
+    },
+    image_caption () {
+      return marked(this.story.content.image_caption)
     }
   },
   methods: {
@@ -57,9 +60,6 @@ export default {
         return this.story.content.image
       }
       return false
-    },
-    image_caption () {
-      return this.story.content.image_caption
     },
     tag_list () {
       return this.story.tag_list
@@ -75,7 +75,7 @@ export default {
     })
 
     this.image()
-    this.image_caption()
+    // this.image_caption()
     this.tag_list()
   },
   asyncData (context) {
@@ -94,17 +94,19 @@ export default {
 </script>
 
 <style lang="scss">
+@import '~assets/variables';
+
 .blog {
   padding: 0 20px;
-  max-width: 600px;
-  margin: 40px auto 100px;
+  max-width: 800px;
+  margin: 0 auto;
 
   img {
     width: 100%;
     height: auto;
   }
 
-  p:first-child::first-letter {
+  .dropcap::first-letter {
     float: left;
     font-size: 3rem;
     padding-right: 0.5rem;
@@ -123,5 +125,12 @@ export default {
 
 .tags {
   margin-top: 3rem;
+}
+
+.tag a {
+  color: #fff;
+}
+.tag a:hover {
+  color: $highlight;
 }
 </style>

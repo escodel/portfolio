@@ -1,21 +1,8 @@
 @import '~bulma/sass/utilities/initial-variables';
 @import '~bulma/sass/utilities/functions';
+@import 'variables';
 
-// Initial variables
-$prussianblue: #0B3C5D;
 
-// Set derived variables
-$primary: $prussianblue;
-$blue: #328CC1;
-
-// Custom colors
-$highlight: #D9B310;
-$highlight-invert: findColorInvert($highlight);
-$ivoryblack: #1D2731;
-$ivoryblack-invert: findColorInvert($ivoryblack);
-
-$link: $blue;
-$link-hover: $highlight;
 
 @import '~bulma/sass/utilities/derived-variables.sass';
 $addColors: (

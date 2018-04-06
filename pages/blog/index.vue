@@ -10,26 +10,27 @@
       </div>
     </div>
     <section class="container">
-      <div v-for="blogPost in data.stories" :key="blogPost.content._uid" class="card" v-on:update-blog="updateBlogIndex($event)">
-        <header class="card-header level">
-          <div class="card-header-title level-left">
-            <p class="level-item">
-              <nuxt-link :to="'/' + blogPost.full_slug">
-                {{ blogPost.content.name }}
-              </nuxt-link>
-            </p>
-          </div>
-          <div class="level-right">
-            <p class="level-item">
-              <small v-text="formatDate(blogPost.published_at)"></small>
-            </p>
-          </div>
-        </header>
-        <div class="card-content">
+      <div v-for="blogPost in data.stories" :key="blogPost.content._uid" class="box" v-on:update-blog="updateBlogIndex($event)">
+        <nuxt-link :to="'/' + blogPost.full_slug">
+          <header class="level">
+              <div class="blog-post-title">
+                <p>
+                    {{ blogPost.content.name }}
+                </p>
+              </div>
+              <div class="level-right">
+                <p class="level-item">
+                  <small v-text="formatDate(blogPost.published_at)"></small>
+                </p>
+              </div>
+          </header>
+        </nuxt-link>
+        <hr>
+        <div>
           <div class="content">
             {{ blogPost.content.intro }}
           </div>
-          <div class="card-footer">
+          <div class="blog-post-footer">
             <span class="tag is-primary" v-for="tag in blogPost.tag_list" :key="tag.id">
               <nuxt-link :to="'/blog/tags/' + tag">
                 {{ tag }}
@@ -68,7 +69,7 @@ export default {
     return context.app.$storyapi.get('cdn/stories', {
       version: version,
       starts_with: 'blog',
-      per_page: 1,
+      per_page: 10,
       page: currentPage
     }).then((res) => {
       return res
@@ -79,13 +80,13 @@ export default {
   methods: {
     formatDate: function (value) {
       if (value) {
-        return moment(String(value)).format('MM/DD/YYYY h:mma')
+        return moment(String(value)).format('MMMM Do, YYYY')
       }
     },
     updateBlogIndex: function (value) {
       Storyblok.get('cdn/stories', {
         starts_with: 'blog',
-        per_page: 1,
+        per_page: 10,
         page: value
       }).then((res) => {
         this.data.stories = res.data.stories
@@ -102,20 +103,31 @@ export default {
 </script>
 
 <style lang="scss">
-  .card {
-    margin-bottom: 1rem;
+@import '~assets/variables';
+
+  header:hover {
+    .blog-post-title {
+      color: $highlight;
+    }
+    color: $highlight;
   }
-  .card-footer {
-    padding-top: 1rem;
-  }
-  .card-header {
-    padding: 1rem;
-  }
-  .card-header-title {
+  .blog-post-title {
+    color: $primary;
     padding: 0;
+    font-size: 1.75rem;
+    font-weight: 400;
   }
   .level {
     margin-bottom: 0 !important;
+  }
+  .tag a {
+    color: #fff;
+  }
+  .tag a:hover {
+    color: $highlight;
+  }
+  .tag:not(:last-child) {
+    margin-right: 0.5rem;
   }
   @media screen and (max-width: 768px) {
     .level-left + .level-right {
