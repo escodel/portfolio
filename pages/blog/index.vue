@@ -37,33 +37,34 @@
             </span>
           </div>
         </div>
-
       </div>
-      <div v-if="total > 1">
-        <span class="">next >></span>
-      </div>
+      <pagination v-if="total > 1" :total="total" :perPage="perPage"></pagination>
     </section>
   </div>
 </template>
 
 <script>
 import Default from '~/layouts/default.vue'
+import Pagination from '~/components/pagination.vue'
 import moment from 'moment'
 
 export default {
   data () {
-    return { total: 0, data: { stories: [] } }
+    return { total: 0, data: { stories: [], page: 1 } }
   },
   components: {
-    Default
+    Default,
+    Pagination
   },
-  asyncData (context) {
+  async asyncData (context) {
     let version = context.query._storyblok || context.isDev ? 'draft' : 'published'
+    let currentPage = context.route.query.page || 1
 
     return context.app.$storyapi.get('cdn/stories', {
       version: version,
       starts_with: 'blog',
-      per_page: 1
+      per_page: 1,
+      page: currentPage
     }).then((res) => {
       return res
     }).catch((res) => {

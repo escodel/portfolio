@@ -29,7 +29,7 @@ module.exports = {
   */
   loading: { color: '#3B8070' },
   modules: [
-    '@nuxtjs/markdownit',
+    '@nuxtjs/axios',
     ['storyblok-nuxt', {
       accessToken: 'FBRfpdyqPBt0xJrHc47QSQtt',
       cacheProvider: 'memory'
