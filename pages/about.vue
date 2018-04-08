@@ -1,8 +1,8 @@
 <template>
-  <div class="something">
+  <div>
     <div class="hero is-primary">
       <div class="hero-body">
-        <h1 class="title">About</h1>
+        <h1 class="title container">About</h1>
       </div>
     </div>
     <section class="container is-fluid">

@@ -29,7 +29,11 @@ module.exports = {
   */
   loading: { color: '#3B8070' },
   modules: [
-    '@nuxtjs/markdownit'
+    '@nuxtjs/axios',
+    ['storyblok-nuxt', {
+      accessToken: 'FBRfpdyqPBt0xJrHc47QSQtt',
+      cacheProvider: 'memory'
+    }]
   ],
   plugins: [
     { src: '~plugins/ga.js', ssr: false }
@@ -81,5 +85,5 @@ module.exports = {
       })
     }
   },
-  vendor: ['image-webpack-loader']
+  vendor: ['image-webpack-loader', 'moment']
 }

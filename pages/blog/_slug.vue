@@ -1,0 +1,151 @@
+<template>
+  <div>
+    <div class="hero is-primary">
+      <div class="hero-body">
+        <h1 class="title container">
+          <nuxt-link :to="'/blog'">
+            Blog
+          </nuxt-link>
+        </h1>
+      </div>
+    </div>
+    <section class="util__container">
+      <div v-editable="story.content" class="blog content">
+        <h1>{{ story.content.name }}</h1>
+        <div v-if="imagePresent">
+          <div class="box">
+            <div class="content">
+              <img :src="story.content.image">
+              <div class="has-text-right">
+                <small><em v-html="image_caption"></em></small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div v-html="body" class="has-text-justified dropcap">
+        </div>
+        <div class="tags">
+          <span v-for="tag in story.tag_list" :key="tag.id" class="tag is-primary">
+              <nuxt-link :to="'/blog/tags/' + tag">
+                {{ tag }}
+              </nuxt-link>
+          </span>
+        </div>
+      </div>
+    </section>
+  </div>
+</template>
+
+<script>
+import marked from 'marked'
+import Default from '~/layouts/default.vue'
+
+export default {
+  data () {
+    return {
+      story: {
+        content: {
+          body: '',
+          image: '',
+          image_caption: ''
+        }
+      },
+      imagePresent: false
+    }
+  },
+  components: {
+    Default
+  },
+  computed: {
+    body () {
+      if (this.story.content.body) {
+        return marked(this.story.content.body)
+      }
+    },
+    image_caption () {
+      if (this.story.content.image_caption) {
+        return marked(this.story.content.image_caption)
+      }
+    }
+  },
+  methods: {
+    image () {
+      if (this.story.content.image) {
+        this.imagePresent = true
+        return this.story.content.image
+      }
+      return false
+    },
+    tag_list () {
+      return this.story.tag_list
+    }
+  },
+  mounted () {
+    this.$storyblok.init()
+    this.$storyblok.on('change', () => {
+      location.reload(true)
+    })
+    this.$storyblok.on('published', () => {
+      location.reload(true)
+    })
+
+    this.image()
+    // this.image_caption()
+    this.tag_list()
+  },
+  asyncData (context) {
+    let version = context.query._storyblok || context.isDev ? 'draft' : 'published'
+    let endpoint = `cdn/stories/blog/${context.params.slug}`
+
+    return context.app.$storyapi.get(endpoint, {
+      version: version
+    }).then((res) => {
+      return res.data
+    }).catch((res) => {
+      context.error({ statusCode: res.response.status, message: res.response.data })
+    })
+  }
+}
+</script>
+
+<style lang="scss">
+@import '~assets/variables';
+
+.blog {
+  padding: 0 20px;
+  max-width: 800px;
+  margin: 0 auto;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  .dropcap::first-letter {
+    float: left;
+    font-size: 3rem;
+    padding-right: 0.5rem;
+    padding-top: 0;
+    line-height: 3rem;
+  }
+}
+
+.box {
+  margin-bottom: 2rem;
+}
+
+.blog__body {
+  line-height: 1.6;
+}
+
+.tags {
+  margin-top: 3rem;
+}
+
+.tag a {
+  color: #fff;
+}
+.tag a:hover {
+  color: $highlight;
+}
+</style>
