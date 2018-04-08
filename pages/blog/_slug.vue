@@ -58,10 +58,14 @@ export default {
   },
   computed: {
     body () {
-      return marked(this.story.content.body)
+      if (this.story.content.body) {
+        return marked(this.story.content.body)
+      }
     },
     image_caption () {
-      return marked(this.story.content.image_caption)
+      if (this.story.content.image_caption) {
+        return marked(this.story.content.image_caption)
+      }
     }
   },
   methods: {
