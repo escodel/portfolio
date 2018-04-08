@@ -1,7 +1,7 @@
 <template>
   <div class="pagination-bar">
     <span v-if="numberOfPages > 1" v-for="page in numberOfPages" :key="page.id">
-      <nuxt-link class="button" :to="'/blog?page=' + page" v-on:click.native="$emit('update-blog', page)">
+      <nuxt-link class="button" :to="currentUrl + '?page=' + page" v-on:click.native="$emit('update-blog', page)">
         {{ page }}
       </nuxt-link>
     </span>
@@ -13,8 +13,12 @@ export default {
   data () {
     return {
       currentPage: 1,
-      numberOfPages: ''
+      numberOfPages: '',
+      currentUrl: ''
     }
+  },
+  created () {
+    this.setRoute()
   },
   mounted () {
     this.setNumberOfPages()
@@ -30,6 +34,9 @@ export default {
     },
     setCurrentPage () {
       this.currentPage = this.$route.query.page || 1
+    },
+    setRoute () {
+      this.currentUrl = this.$route.path
     }
   },
   watch: {
