@@ -62,15 +62,14 @@ export default {
     Default,
     Pagination
   },
-  async asyncData (context) {
+  asyncData (context) {
     let version = context.query._storyblok || context.isDev ? 'draft' : 'published'
     let currentPage = context.route.query.page || 1
 
     return context.app.$storyapi.get('cdn/stories', {
-      version: version,
+      version: 'published',
       starts_with: 'blog',
-      per_page: 10,
-      page: currentPage
+      per_page: 10
     }).then((res) => {
       return res
     }).catch((res) => {

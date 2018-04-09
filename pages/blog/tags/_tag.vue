@@ -65,12 +65,13 @@ export default {
   async asyncData (context) {
     let version = context.query._storyblok || context.isDev ? 'draft' : 'published'
     let currentPage = context.route.query.page || 1
+    let tag = context.route.params.tag
 
     return context.app.$storyapi.get('cdn/stories', {
       version: version,
       starts_with: 'blog',
       per_page: 10,
-      page: currentPage
+      with_tag: tag
     }).then((res) => {
       return res
     }).catch((res) => {
@@ -80,7 +81,7 @@ export default {
   methods: {
     formatDate: function (value) {
       if (value) {
-        return moment(String(value)).format('MM/DD/YYYY hh:mma')
+        return moment(String(value)).format('MMMM Do, YYYY')
       }
     },
     updateBlogIndex: function (value) {

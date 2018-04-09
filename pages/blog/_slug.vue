@@ -14,7 +14,7 @@
         <h1>{{ story.content.name }}</h1>
         <div v-if="imagePresent">
           <div class="box">
-            <div class="content">
+            <div class="content image">
               <img :src="story.content.image">
               <div class="has-text-right">
                 <small><em v-html="image_caption"></em></small>
