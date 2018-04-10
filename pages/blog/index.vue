@@ -78,7 +78,8 @@ export default {
     return context.app.$storyapi.get('cdn/stories', {
       version: version,
       starts_with: 'blog',
-      per_page: 10
+      per_page: 10,
+      cv: 1
     }).then((res) => {
       return res
     }).catch((res) => {
