@@ -64,8 +64,11 @@ export default {
   },
   mounted () {
     this.$storyblok.init()
-    this.$storyblok.on('change', function () {
-      window.location.reload()
+    this.$storyblok.on('change', () => {
+      location.reload(true)
+    })
+    this.$storyblok.on('published', () => {
+      location.reload(true)
     })
   },
   asyncData (context) {
