@@ -63,9 +63,7 @@ export default {
     Pagination
   },
   mounted () {
-    this.$storyblok.init({
-      accessToken: 'FBRfpdyqPBt0xJrHc47QSQtt'
-    })
+    this.$storyblok.init()
     this.$storyblok.on('change', () => {
       location.reload(true)
     })
@@ -79,7 +77,7 @@ export default {
     console.log(cacheVersion)
     let currentPage = context.route.query.page || 1
 
-    return Storyblok.get('cdn/stories', {
+    return context.app.$storyapi.get('cdn/stories', {
       version: version,
       starts_with: 'blog',
       per_page: 10,
