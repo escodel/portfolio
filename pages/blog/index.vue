@@ -62,12 +62,18 @@ export default {
     Default,
     Pagination
   },
+  mounted () {
+    this.$storyblok.init()
+    this.$storyblok.on('change', function () {
+      window.location.reload()
+    })
+  },
   asyncData (context) {
     let version = context.query._storyblok || context.isDev ? 'draft' : 'published'
     let currentPage = context.route.query.page || 1
 
     return context.app.$storyapi.get('cdn/stories', {
-      version: 'published',
+      version: version,
       starts_with: 'blog',
       per_page: 10
     }).then((res) => {
