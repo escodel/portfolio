@@ -1,3 +1,10 @@
+const axios = require('@nuxtjs/axios')
+const Storyblokclient = require('storyblok-js-client')
+
+let Storyblok = new Storyblokclient({
+  accessToken: 'FBRfpdyqPBt0xJrHc47QSQtt'
+})
+
 module.exports = {
   /*
   ** Headers of the page
@@ -38,6 +45,16 @@ module.exports = {
   plugins: [
     { src: '~plugins/ga.js', ssr: false }
   ],
+  generate: {
+    routes: function () {
+      return Storyblok.get('cdn/stories')
+      .then((res) => {
+        return res.data.stories.map((post) => {
+          return '/blog/' + post.slug
+        })
+      })
+    }
+  },
   /*
   ** Build configuration
   */
