@@ -63,7 +63,9 @@ export default {
     Pagination
   },
   mounted () {
-    this.$storyblok.init()
+    this.$storyblok.init({
+      accessToken: 'FBRfpdyqPBt0xJrHc47QSQtt'
+    })
     this.$storyblok.on('change', () => {
       location.reload(true)
     })
