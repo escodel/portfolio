@@ -71,7 +71,7 @@ export default {
       location.reload(true)
     })
   },
-  asyncData (context) {
+  async asyncData (context) {
     let version = context.query._storyblok || context.isDev ? 'draft' : 'published'
     let currentPage = context.route.query.page || 1
 
