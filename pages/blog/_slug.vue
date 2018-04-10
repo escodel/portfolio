@@ -124,6 +124,7 @@ export default {
   .dropcap::first-letter {
     float: left;
     font-size: 3rem;
+    margin-top: -0.25rem;
     padding-right: 0.5rem;
     padding-top: 0;
     line-height: 3rem;
