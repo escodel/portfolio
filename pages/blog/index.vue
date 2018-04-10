@@ -73,13 +73,16 @@ export default {
   },
   async asyncData (context) {
     let version = context.query._storyblok || context.isDev ? 'draft' : 'published'
+    let cacheVersion = function () {
+      return context.app.$storyapi.Storyblok.cacheVersion
+    }
     let currentPage = context.route.query.page || 1
 
     return context.app.$storyapi.get('cdn/stories', {
       version: version,
       starts_with: 'blog',
       per_page: 10,
-      cv: 1
+      cv: cacheVersion
     }).then((res) => {
       return res
     }).catch((res) => {
