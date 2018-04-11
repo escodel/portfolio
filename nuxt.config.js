@@ -53,8 +53,7 @@ module.exports = {
           return '/blog/' + post.slug
         })
       })
-    },
-    subFolders: false
+    }
   },
   /*
   ** Build configuration
