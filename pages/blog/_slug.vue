@@ -14,8 +14,10 @@
         <h1>{{ story.content.name }}</h1>
         <div v-if="imagePresent">
           <div class="box">
-            <div class="content image">
-              <img :src="story.content.image">
+            <div class="content">
+              <figure class="image">
+                <img :src="story.content.image">
+              </figure>
               <div class="has-text-right">
                 <small><em v-html="image_caption"></em></small>
               </div>
@@ -38,6 +40,7 @@
 
 <script>
 import marked from 'marked'
+import axios from 'axios'
 import Default from '~/layouts/default.vue'
 
 export default {
@@ -71,10 +74,17 @@ export default {
   methods: {
     image () {
       if (this.story.content.image) {
-        this.imagePresent = true
-        return this.story.content.image
+        axios.get(this.story.content.image)
+          .then((res) => {
+            this.imagePresent = true
+            return res
+          })
+          .catch((err) => {
+            console.log(err.response.data)
+          })
+        // return this.story.content.image
       }
-      return false
+      // return false
     },
     tag_list () {
       return this.story.tag_list
