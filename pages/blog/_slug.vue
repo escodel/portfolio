@@ -15,9 +15,7 @@
         <div v-if="imagePresent">
           <div class="box">
             <div class="content">
-              <figure class="image">
-                <img :src="story.content.image">
-              </figure>
+              <img :src="story.content.image">
               <div class="has-text-right">
                 <small><em v-html="image_caption"></em></small>
               </div>
