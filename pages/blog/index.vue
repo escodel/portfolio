@@ -55,6 +55,16 @@ var Storyblok = new StoryblokClient({
 })
 
 export default {
+  head: {
+    title: 'Eric Delia - Blog',
+    meta: [
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'Eric Delia\'s blog focusing on web design, developing with JavaScript, and political technology.'
+      }
+    ]
+  },
   data () {
     return { total: 0, data: { stories: [], page: 1 } }
   },

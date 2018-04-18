@@ -1,12 +1,12 @@
 <template>
-  <div>
+  <div itemscope itemtype="http://schema.org/Person">
     <div class="hero is-primary">
       <div class="hero-body">
         <div class="container content">
-          <h1 class="title">
+          <h1 class="title" itemprop="name">
             Eric Delia
           </h1>
-          <h2 class="subtitle">
+          <h2 class="subtitle" itemprop="homeLocation">
             Cary, North Carolina
           </h2>
         </div>
@@ -80,7 +80,7 @@
               <div class="media-content">
                 <div class="content">
                   <p>
-                    Virginia Commonwealth University<br>
+                    <span itemprop="alumniOf">Virginia Commonwealth University</span><br>
                     B.A. Political Science, 2007<br>
                     <em>Cum Laude</em>
                   </p>
@@ -236,6 +236,16 @@
 
 <script>
 export default {
+  head: {
+    title: 'Eric Delia - CV',
+    meta: [
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'Curriculum vitae for senior front-end developer Eric Delia.'
+      }
+    ]
+  },
   data() {
     return {
       workHistories: [

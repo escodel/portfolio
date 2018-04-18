@@ -7,12 +7,12 @@
           <figure class="media-left image is-96x96">
             <img src="../assets/img/escodel-527.png" class="img-circular">
           </figure>
-          <div class="media-content">
+          <div class="media-content" itemscope itemtype="http://schema.org/Person">
             <div class="content">
-              <h1 class="title">
+              <h1 class="title" itemprop="name">
                 Eric Delia
               </h1>
-              <h2 class="subtitle">
+              <h2 class="subtitle" itemprop="jobTitle">
                 front-end developer
               </h2>
             </div>

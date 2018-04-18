@@ -1,9 +1,9 @@
 <template>
-  <div>
+  <div itemscope itemtype="http://schema.org/BlogPosting">
     <div class="hero is-primary">
       <div class="hero-body">
         <h1 class="title container">
-          <nuxt-link :to="'/blog'">
+          <nuxt-link :to="'/blog'" itemprop="mainEntityOfPage">
             Blog
           </nuxt-link>
         </h1>
@@ -11,18 +11,18 @@
     </div>
     <section class="util__container">
       <div v-editable="story.content" class="blog content">
-        <h1>{{ story.content.name }}</h1>
+        <h1 itemprop="headline">{{ story.content.name }}</h1>
         <div v-if="imagePresent">
           <div class="box">
             <div class="content">
-              <img :src="story.content.image">
+              <img :src="story.content.image" itemprop="thumbnail">
               <div class="has-text-right">
                 <small><em v-html="image_caption"></em></small>
               </div>
             </div>
           </div>
         </div>
-        <div v-html="body" class="has-text-justified dropcap">
+        <div v-html="body" class="has-text-justified dropcap" itemprop="articleBody">
         </div>
         <div class="tags">
           <span v-for="tag in story.tag_list" :key="tag.id" class="tag is-primary">

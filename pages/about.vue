@@ -45,3 +45,11 @@
     </section>
   </div>
 </template>
+
+<script>
+export default {
+  head: {
+    title: 'Eric Delia - About'
+  }
+}
+</script>
