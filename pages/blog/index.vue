@@ -1,9 +1,9 @@
 <template>
-  <div>
+  <div itemscope itemtype="http://schema.org/BlogPosting">
     <div class="hero is-primary">
       <div class="hero-body">
         <h1 class="title container">
-          <nuxt-link :to="'/blog'">
+          <nuxt-link :to="'/blog'" itemprop="mainEntityOfPage">
             Blog
           </nuxt-link>
         </h1>
@@ -14,20 +14,20 @@
         <nuxt-link :to="'/' + blogPost.full_slug">
           <header class="level">
               <div class="blog-post-title">
-                <p>
+                <p itemprop="headline">
                     {{ blogPost.content.name }}
                 </p>
               </div>
               <div class="level-right">
                 <p class="level-item">
-                  <small v-text="formatDate(blogPost.published_at)"></small>
+                  <small v-text="formatDate(blogPost.published_at)" itemprop="datePublished"></small>
                 </p>
               </div>
           </header>
         </nuxt-link>
         <hr>
         <div>
-          <div class="content">
+          <div class="content" itemprop="description">
             {{ blogPost.content.intro }}
           </div>
           <div class="blog-post-footer">
