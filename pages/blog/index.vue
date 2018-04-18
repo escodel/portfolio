@@ -1,9 +1,9 @@
 <template>
-  <div itemscope itemtype="http://schema.org/BlogPosting">
+  <div>
     <div class="hero is-primary">
       <div class="hero-body">
         <h1 class="title container">
-          <nuxt-link :to="'/blog'" itemprop="mainEntityOfPage">
+          <nuxt-link :to="'/blog'">
             Blog
           </nuxt-link>
         </h1>
@@ -13,21 +13,21 @@
       <div v-for="blogPost in data.stories" :key="blogPost.content._uid" class="box" v-on:update-blog="updateBlogIndex($event)">
         <nuxt-link :to="'/' + blogPost.full_slug">
           <header class="level">
-              <div class="blog-post-title">
-                <p itemprop="headline">
-                    {{ blogPost.content.name }}
-                </p>
-              </div>
-              <div class="level-right">
-                <p class="level-item">
-                  <small v-text="formatDate(blogPost.published_at)" itemprop="datePublished"></small>
-                </p>
-              </div>
+            <div class="blog-post-title">
+              <p itemprop="headline">
+                  {{ blogPost.content.name }}
+              </p>
+            </div>
+            <div class="level-right">
+              <p class="level-item">
+                <small v-text="formatDate(blogPost.published_at)"></small>
+              </p>
+            </div>
           </header>
         </nuxt-link>
         <hr>
         <div>
-          <div class="content" itemprop="description">
+          <div class="content">
             {{ blogPost.content.intro }}
           </div>
           <div class="blog-post-footer">

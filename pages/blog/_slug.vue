@@ -15,7 +15,7 @@
         <div v-if="imagePresent">
           <div class="box">
             <div class="content">
-              <img :src="story.content.image" itemprop="thumbnail">
+              <img :src="story.content.image" itemprop="image">
               <div class="has-text-right">
                 <small><em v-html="image_caption"></em></small>
               </div>
@@ -42,6 +42,15 @@ import axios from 'axios'
 import Default from '~/layouts/default.vue'
 
 export default {
+  head () {
+    let post = this.story.content
+    return {
+      title: 'Eric Delia - ' + post.name,
+      script: [
+        { type: 'application/ld+json', src: JSON.stringify(this.structuredData) }
+      ]
+    }
+  },
   data () {
     return {
       story: {
@@ -51,7 +60,8 @@ export default {
           image_caption: ''
         }
       },
-      imagePresent: false
+      imagePresent: false,
+      structuredData: {}
     }
   },
   components: {
@@ -100,6 +110,27 @@ export default {
     this.image()
     // this.image_caption()
     this.tag_list()
+    this.structuredData = {
+      "@context": "http://schema.org",
+      "@type": "BlogPosting",
+      "author": {
+        "@type": "Person",
+        "name": "Eric Delia"
+      },
+      "image": this.story.content.image,
+      "datePublished": this.story.published_at,
+      "headline": this.story.name,
+      "publisher": {
+        "@type": "Organization",
+        "name": "Eric Delia",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.ericdelia.com/eric-delia-logo-cropped.png"
+        }
+      },
+      "description": this.story.content.intro,
+      "keywords": this.story.tag_list.join(', ')
+    }
   },
   asyncData (context) {
     let version = context.query._storyblok || context.isDev ? 'draft' : 'published'
