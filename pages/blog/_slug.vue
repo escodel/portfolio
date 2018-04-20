@@ -1,9 +1,9 @@
 <template>
-  <div itemscope itemtype="http://schema.org/BlogPosting">
+  <div>
     <div class="hero is-primary">
       <div class="hero-body">
         <h1 class="title container">
-          <nuxt-link :to="'/blog'" itemprop="mainEntityOfPage">
+          <nuxt-link :to="'/blog'">
             Blog
           </nuxt-link>
         </h1>
@@ -22,7 +22,7 @@
             </div>
           </div>
         </div>
-        <div v-html="body" class="has-text-justified dropcap" itemprop="articleBody">
+        <div v-html="body" class="has-text-justified dropcap">
         </div>
         <div class="tags">
           <span v-for="tag in story.tag_list" :key="tag.id" class="tag is-primary">
