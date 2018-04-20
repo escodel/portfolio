@@ -14,7 +14,8 @@ module.exports = {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Eric Delia is a senior front-end developer with a passion for HTML, CSS, and JavaScript. This portfolio site was built with Vue, Nuxt, Bulma, and Storyblok.' }
+      { hid: 'description', name: 'description', content: 'Eric Delia is a senior front-end developer with a passion for HTML, CSS, and JavaScript. This portfolio site was built with Vue, Nuxt, Bulma, and Storyblok.' },
+      { hid: 'site-verification', name:'google-site-verification', content: '5Okin1cAGo23N6WtAww_8qbIBq5YdcNjYRwNEErG-RY' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
