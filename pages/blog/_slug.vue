@@ -46,9 +46,11 @@ export default {
     let post = this.story.content
     return {
       title: 'Eric Delia - ' + post.name,
-      script: [
-        { type: 'application/ld+json', src: JSON.stringify(this.structuredData) }
-      ]
+      __dangerouslyDisableSanitizers: ['script'],
+      script: [{
+        innerHTML: JSON.stringify(this.structuredData),
+        type: 'application/ld+json'
+      }]
     }
   },
   data () {
