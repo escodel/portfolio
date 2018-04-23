@@ -54,21 +54,25 @@ export default {
       meta: [
         {
           hid: 'og:title',
+          prefix: 'og: http://ogp.me/ns#',
           property: 'og:title',
           content: post.name
         },
         {
           hid: 'og:image',
+          prefix: 'og: http://ogp.me/ns#',
           property: 'og:image',
           content: post.image
         },
         {
           hid: 'og:description',
+          prefix: 'og: http://ogp.me/ns#',
           property: 'og:description',
           content: post.intro
         },
         {
           hid: 'og:url',
+          prefix: 'og: http://ogp.me/ns#',
           property: 'og:url',
           content: 'https://www.ericdelia.com' + this.$route.fullPath
         }
