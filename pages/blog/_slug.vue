@@ -11,11 +11,11 @@
     </div>
     <section class="util__container">
       <div v-editable="story.content" class="blog content">
-        <h1 itemprop="headline">{{ story.content.name }}</h1>
+        <h1>{{ story.content.name }}</h1>
         <div v-if="imagePresent">
           <div class="box">
             <div class="content">
-              <img :src="story.content.image" itemprop="image">
+              <img :src="story.content.image">
               <div class="has-text-right">
                 <small><em v-html="image_caption"></em></small>
               </div>
@@ -50,7 +50,29 @@ export default {
       script: [{
         innerHTML: JSON.stringify(this.structuredData),
         type: 'application/ld+json'
-      }]
+      }],
+      meta: [
+        {
+          hid: 'og:title',
+          name: 'og:title',
+          content: post.name
+        },
+        {
+          hid: 'og:image',
+          name: 'og:image',
+          content: post.image
+        },
+        {
+          hid: 'og:description',
+          name: 'og:description',
+          content: post.intro
+        },
+        {
+          hid: 'og:url',
+          name: 'og:url',
+          content: post.url
+        }
+      ]
     }
   },
   data () {
