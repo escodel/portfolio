@@ -70,7 +70,7 @@ export default {
         {
           hid: 'og:url',
           name: 'og:url',
-          content: post.url
+          content: 'https://www.ericdelia.com' + this.$route.fullPath
         }
       ]
     }
