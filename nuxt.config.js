@@ -17,6 +17,7 @@ module.exports = {
       { hid: 'description', name: 'description', content: 'Eric Delia is a senior front-end developer with a passion for HTML, CSS, and JavaScript. This portfolio site was built with Vue, Nuxt, Bulma, and Storyblok.' },
       { hid: 'twitter:card', name: 'twitter:card', content: 'summary' },
       { hid: 'twitter:creator', name: 'twitter:creator', content: '@ericdelia_' },
+      { hid: 'twitter:title', name: 'twitter:title', content: 'Eric Delia' },
       { hid: 'site-verification', name:'google-site-verification', content: '5Okin1cAGo23N6WtAww_8qbIBq5YdcNjYRwNEErG-RY' }
     ],
     link: [
