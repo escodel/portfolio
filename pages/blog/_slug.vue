@@ -53,6 +53,16 @@ export default {
       }],
       meta: [
         {
+          hid: 'twitter:card',
+          name: 'twitter:card',
+          content: 'summary'
+        },
+        {
+          hid: 'twitter:creator',
+          name: 'twitter:creator',
+          content: '@ericdelia_'
+        },
+        {
           hid: 'og:title',
           prefix: 'og: http://ogp.me/ns#',
           property: 'og:title',
