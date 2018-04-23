@@ -54,22 +54,22 @@ export default {
       meta: [
         {
           hid: 'og:title',
-          name: 'og:title',
+          property: 'og:title',
           content: post.name
         },
         {
           hid: 'og:image',
-          name: 'og:image',
+          property: 'og:image',
           content: post.image
         },
         {
           hid: 'og:description',
-          name: 'og:description',
+          property: 'og:description',
           content: post.intro
         },
         {
           hid: 'og:url',
-          name: 'og:url',
+          property: 'og:url',
           content: 'https://www.ericdelia.com' + this.$route.fullPath
         }
       ]
