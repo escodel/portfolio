@@ -63,6 +63,21 @@ export default {
           content: '@ericdelia_'
         },
         {
+          hid: 'twitter:title',
+          name: 'twitter:title',
+          content: post.name
+        },
+        {
+          hid: 'twitter:description',
+          name: 'twitter:description',
+          content: post.intro
+        },
+        {
+          hid: 'twitter:image',
+          name: 'twitter:image',
+          content: post.image
+        },
+        {
           hid: 'og:title',
           prefix: 'og: http://ogp.me/ns#',
           property: 'og:title',
