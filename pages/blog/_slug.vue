@@ -75,7 +75,7 @@ export default {
         {
           hid: 'twitter:image',
           name: 'twitter:image',
-          content: post.image
+          content: post.image + '/1200'
         },
         {
           hid: 'og:title',
