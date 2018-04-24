@@ -58,8 +58,8 @@ export default {
           content: 'summary'
         },
         {
-          hid: 'twitter:creator',
-          name: 'twitter:creator',
+          hid: 'twitter:site',
+          name: 'twitter:site',
           content: '@ericdelia_'
         },
         {

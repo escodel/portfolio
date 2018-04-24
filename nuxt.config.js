@@ -16,9 +16,11 @@ module.exports = {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: 'Eric Delia is a senior front-end developer with a passion for HTML, CSS, and JavaScript. This portfolio site was built with Vue, Nuxt, Bulma, and Storyblok.' },
       { hid: 'twitter:card', name: 'twitter:card', content: 'summary' },
-      { hid: 'twitter:creator', name: 'twitter:creator', content: '@ericdelia_' },
+      { hid: 'twitter:site', name: 'twitter:site', content: '@ericdelia_' },
       { hid: 'twitter:title', name: 'twitter:title', content: 'Eric Delia' },
-      { hid: 'site-verification', name:'google-site-verification', content: '5Okin1cAGo23N6WtAww_8qbIBq5YdcNjYRwNEErG-RY' }
+      { hid: 'twitter:description', name: 'twitter:description', content: 'Eric Delia is a senior front-end developer with a passion for HTML, CSS, and JavaScript.' },
+      { hid: 'twitter:image', name: 'twitter:image', content: 'https://source.unsplash.com/466ENaLuhLY/1200' },
+      { hid: 'site-verification', name: 'google-site-verification', content: '5Okin1cAGo23N6WtAww_8qbIBq5YdcNjYRwNEErG-RY' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
