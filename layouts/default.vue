@@ -31,14 +31,19 @@
       </div>
 
       <div class="navbar-end is-hidden-touch">
-        <a class="navbar-item" href="https://github.com/escodel" target="_blank">
+        <a class="navbar-item" href="https://github.com/escodel" target="_blank" rel="noopener noreferrer">
           <span class="icon">
             <i class="fa fa-github"></i>
           </span>
         </a>
-        <a class="navbar-item" href="https://www.linkedin.com/in/ericdelia" target="_blank">
+        <a class="navbar-item" href="https://www.linkedin.com/in/ericdelia" target="_blank" rel="noopener noreferrer">
           <span class="icon">
             <i class="fa fa-linkedin"></i>
+          </span>
+        </a>
+        <a class="navbar-item" href="https://twitter.com/ericdelia_" target="_blank" rel="noopener noreferrer">
+          <span class="icon">
+            <i class="fa fa-twitter"></i>
           </span>
         </a>
         <a class="navbar-item" href="mailto:escodel@gmail.com">
@@ -54,14 +59,19 @@
         <div class="has-text-centered">
           <img class="footer-logo" src="../assets/img/eric-delia-logo-cropped.png" alt="Eric Delia">
           <div class="footer-links-padding">
-            <a href="https://github.com/escodel" target="_blank">
+            <a href="https://github.com/escodel" target="_blank" rel="noopener noreferrer">
               <span class="icon">
                 <i class="fa fa-github"></i>
               </span>
             </a>
-            <a href="https://www.linkedin.com/in/ericdelia" target="_blank">
+            <a href="https://www.linkedin.com/in/ericdelia" target="_blank" rel="noopener noreferrer">
               <span class="icon">
                 <i class="fa fa-linkedin"></i>
+              </span>
+            </a>
+            <a href="https://twitter.com/ericdelia_" target="_blank" rel="noopener noreferrer">
+              <span class="icon">
+                <i class="fa fa-twitter"></i>
               </span>
             </a>
             <a href="mailto:escodel@gmail.com">
