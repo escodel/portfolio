@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="flex-content">
     <div class="hero is-primary">
       <div class="hero-body">
         <h1 class="title container">
@@ -8,6 +8,21 @@
           </nuxt-link>
         </h1>
       </div>
+    </div>
+    <div class="social">
+      <h2>Share this post</h2>
+      <ul>
+        <li>
+          <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Hello%20world">
+            <i class="fa fa-2x fa-twitter"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fa fa-2x fa-linkedin"></i>
+          </a>
+        </li>
+      </ul>
     </div>
     <section class="util__container">
       <div v-editable="story.content" class="blog content">
@@ -202,6 +217,12 @@ export default {
 
 <style lang="scss">
 @import '~assets/variables';
+@import '~bulma/sass/utilities/mixins';
+
+.flex-content {
+  display: flex;
+  flex-direction: column;
+}
 
 .blog {
   padding: 0 20px;
@@ -223,6 +244,32 @@ export default {
   }
 }
 
+.social {
+  flex: 1;
+  order: 3;
+  text-align: center;
+  background-color: $blue;
+  padding: 2rem 0;
+}
+
+.social h2 {
+  color: $prussianblue;
+  font-weight: bold;
+}
+
+.social ul {
+  list-style: none;
+}
+
+.social ul li {
+  margin: 1rem 1.5rem;
+  display: inline-block;
+}
+
+.social ul li a {
+  color: #fff;
+}
+
 .box {
   margin-bottom: 2rem;
 }
@@ -240,5 +287,9 @@ export default {
 }
 .tag a:hover {
   color: $highlight;
+}
+
+@include mobile {
+
 }
 </style>
