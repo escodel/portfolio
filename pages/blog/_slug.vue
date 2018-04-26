@@ -13,15 +13,15 @@
       <h2>Share this post</h2>
       <ul>
         <li>
-          <a class="twitter-share-button" :href="'https://twitter.com/intent/tweet?text=' + story.content.name" data-size="large">
+          <a class="twitter-share-button" :href="'https://twitter.com/intent/tweet?text=' + story.content.name + '&url=https://www.ericdelia.com' + this.$route.fullPath" target="_blank" rel="noopener noreferrer">
             <i class="fa fa-2x fa-twitter"></i>
           </a>
         </li>
-        <!-- <li>
-          <a href="#">
+        <li>
+          <a :href="'https://www.linkedin.com/shareArticle?url=http://www.ericdelia.com' + this.$route.fullPath + '&mini=true&title=' + story.content.name + '&summary=' + story.content.intro" target="_blank" rel="noopener noreferrer">
             <i class="fa fa-2x fa-linkedin"></i>
           </a>
-        </li> -->
+        </li>
       </ul>
     </div>
     <section class="util__container">
@@ -65,25 +65,6 @@ export default {
       script: [{
         innerHTML: JSON.stringify(this.structuredData),
         type: 'application/ld+json'
-      }],
-      script: [{
-        innerHTML:
-          window.twttr = (function(d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0],
-              t = window.twttr || {};
-            if (d.getElementById(id)) return t;
-            js = d.createElement(s);
-            js.id = id;
-            js.src = "https://platform.twitter.com/widgets.js";
-            fjs.parentNode.insertBefore(js, fjs);
-
-            t._e = [];
-            t.ready = function(f) {
-              t._e.push(f);
-            };
-
-            return t;
-          }(document, "script", "twitter-wjs"))
       }],
       meta: [
         {
@@ -288,6 +269,10 @@ export default {
 
 .social ul li a {
   color: #fff;
+}
+
+.social ul li a:hover {
+  color: $highlight;
 }
 
 .box {
