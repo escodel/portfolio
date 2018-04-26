@@ -125,6 +125,10 @@ export default {
 <style lang="scss">
 @import '~assets/variables';
 
+  section.container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
   header:hover {
     .blog-post-title {
       color: $highlight;
