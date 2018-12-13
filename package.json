@@ -1,37 +1,14 @@
 {
   "name": "portfolio",
-  "version": "1.0.0",
-  "description": "Portfolio site built with Vue and Nuxt.js",
+  "version": "2.0.0",
+  "description": "Portfolio site",
   "author": "escodel <escodel@gmail.com>",
   "private": true,
   "scripts": {
-    "dev": "nuxt",
-    "build": "nuxt build",
-    "start": "nuxt start",
-    "generate": "nuxt generate",
-    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
-    "precommit": "npm run lint"
+    "sass": "node-sass -w sass -o css"
   },
-  "dependencies": {
-    "@nuxtjs/axios": "^5.3.1",
-    "@nuxtjs/markdownit": "^1.2.0",
-    "bulma": "^0.6.2",
-    "font-awesome": "^4.7.0",
-    "marked": "^0.3.19",
-    "moment": "^2.22.0",
-    "nuxt": "^1.0.0",
-    "storyblok-js-client": "^1.0.4",
-    "storyblok-nuxt": "0.0.3"
-  },
+  "dependencies": {},
   "devDependencies": {
-    "babel-eslint": "^8.2.1",
-    "eslint": "^4.15.0",
-    "eslint-friendly-formatter": "^3.0.0",
-    "eslint-loader": "^1.7.1",
-    "eslint-plugin-vue": "^4.0.0",
-    "image-webpack-loader": "^4.1.0",
-    "node-sass": "^4.7.2",
-    "sass-loader": "^6.0.7",
-    "vue-markdown-loader": "^2.4.0"
+    "node-sass": "^4.11.0"
   }
 }
