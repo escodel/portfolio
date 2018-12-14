@@ -32,21 +32,32 @@ h1 {
 }
 
 .navigation {
-  float: right;
+  position: absolute;
+  right: 0;
   margin-right: 1.25rem;
+  z-index: 5;
 }
 
 .nav-list {
   list-style-type: none;
+  transform: translateY(-9999px);
+  z-index: 4;
+}
+
+.nav-padding {
+  position: relative;
+  background: #194869;
+  z-index: 3;
+}
+
+.nav-padding,
+.nav-list {
+  padding: 1rem;
 }
 
 .navigation a {
   color: $goldenrod;
   font-size: 2rem;
-}
-
-.closed {
-  visibility: hidden;
 }
 
 .section {
@@ -116,15 +127,22 @@ h1 {
   border-radius: 50%;
 }
 
+.jumbotron {
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
 .jumbotron h1 {
   font-family: 'Monoton', cursive;
   color: $goldenrod;
   word-spacing: 1rem;
   text-align: center;
   line-height: 1;
+  font-size: 3rem;
 
   @include for-desktop-up {
     line-height: inherit;
+    font-size: 5rem;
   }
 }
 
@@ -135,10 +153,10 @@ h1 {
   margin-bottom: 45px;
   color: antiquewhite;
   font-weight: lighter;
-  letter-spacing: 0.5rem;
 
   @include for-desktop-up {
     margin-top: -85px;
+    letter-spacing: 0.5rem;
   }
 }
 
