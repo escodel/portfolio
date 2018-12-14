@@ -5,7 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Eric Delia</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Monoton"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css"
+    />
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
@@ -15,9 +23,20 @@
   </head>
   <body class="bg-primary">
     <main class="wrapper">
-      <section class="section parallax bg1">
-        <h1>First Section</h1>
-        <div class="container">
+      <nav class="navigation" role="navigation">
+        <ul class="nav-list">
+          <li><a href="#about">About</a></li>
+        </ul>
+      </nav>
+      <section class="section">
+        <div class="jumbotron">
+          <h1>Eric Delia</h1>
+          <p>front-end developer</p>
+        </div>
+        <div class="image-shadow">
+          <img src="./build/images/escodel-527.png" class="hero" />
+        </div>
+        <div class="container animated fadeInUp slow">
           <div class="column">
             <i class="fa fa-map-signs fa-3x bg-secondary"></i>
             <h2>Consult</h2>
@@ -49,8 +68,16 @@
           </div>
         </div>
       </section>
-      <section class="section static"><h1>Boring</h1></section>
-      <section class="section parallax"><h1>Third Section</h1></section>
+      <section class="section static">
+        <h1><a name="about">About</a></h1>
+        <p>
+          Senior consultant with seven years of experience developing for the
+          web, 10+ years in a variety of industries. Travels have included UI/UX
+          design, web/enterprise content management, technical/creative writing,
+          and building brand awareness.
+        </p>
+      </section>
+      <section class="section parallax bg2"><h1>Third Section</h1></section>
     </main>
   </body>
 </html>

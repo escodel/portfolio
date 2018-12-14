@@ -1,4 +1,5 @@
 @import './variables';
+@import './mixins';
 
 * {
   box-sizing: border-box;
@@ -19,6 +20,10 @@ body {
   scroll-behavior: smooth;
 }
 
+h1 {
+  font-size: 5rem;
+}
+
 .wrapper {
   height: 100vh;
   overflow-x: hidden;
@@ -28,17 +33,23 @@ body {
 
 .section {
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
   display: grid;
   align-items: center;
   justify-items: center;
   text-shadow: 0 0 5px #000;
+  padding-bottom: 6rem;
 }
 
 .container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
   justify-items: center;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+
+  @include for-desktop-up {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .container .column {
@@ -47,6 +58,10 @@ body {
   display: grid;
   grid-template-rows: 60px 60px 1fr;
   justify-items: center;
+}
+
+.column div {
+  line-height: 1.5rem;
 }
 
 .parallax::after {
@@ -63,20 +78,93 @@ body {
 }
 
 .static {
-  background: rgba(white, 0.4);
+  background: #38d39f;
+}
+
+.hero {
+  height: 12rem;
+  border-radius: 50%;
+}
+
+.jumbotron h1 {
+  font-family: 'Monoton', cursive;
+  color: $goldenrod;
+  word-spacing: 1rem;
+  text-align: center;
+  line-height: 1;
+
+  @include for-desktop-up {
+    line-height: inherit;
+  }
+}
+
+.jumbotron p {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-top: -25px;
+  margin-bottom: 45px;
+  color: antiquewhite;
+  font-weight: lighter;
+  letter-spacing: 0.5rem;
+
+  @include for-desktop-up {
+    margin-top: -85px;
+  }
+}
+
+.image-shadow {
+  display: inline-block;
+  position: relative;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.4) -2px 4px 45px 5px inset;
+  margin-bottom: 3rem;
+}
+
+.image-shadow img {
+  max-width: 100%;
+  position: relative;
+  z-index: -1;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
 }
 
 .bg1::after {
-  background-image: url('../assets/images/undraw_developer_activity_bv83.svg');
-  background-size: contain;
+  background-image: url('https://source.unsplash.com/random');
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
 .bg2::after {
-  background-image: url('https://placekitten.com/g/800/600');
+  background-image: url('https://source.unsplash.com/random');
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-left: -6px;
 }
 
-.speed-1 {
+/*
+.hero {
+  background-image: url('../assets/images/undraw_developer_activity_bv83.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 12rem;
+  width: 100%;
+}
+*/
+
+/*
+.bg1::after {
+  background-image: url('../assets/images/undraw_developer_activity_bv83.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding: 12rem;
+  width: 100%;
+}
+*/
+
+/*.speed-1 {
   transform: translateZ(-1px) scale(2);
 }
 .speed-2 {
@@ -85,6 +173,7 @@ body {
 .speed-3 {
   transform: translateZ(-3px) scale(4);
 }
+*/
 
 .bg-primary {
   background-color: $prussian-blue;
