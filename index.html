@@ -66,7 +66,7 @@
       <section class="section">
         <div class="jumbotron">
           <h1>Eric Delia</h1>
-          <p>front-end developer</p>
+          <p>software engineer</p>
         </div>
         <div class="image-shadow">
           <img src="./build/images/escodel-527.png" class="hero" />
@@ -74,7 +74,7 @@
         <div class="container animated fadeInUp slow">
           <div class="column">
             <i class="fa fa-map-signs fa-3x goldenrod"></i>
-            <h2>Consult</h2>
+            <span class="title">Consult</span>
             <div class="blanchedalmond">
               From gathering requirements to guiding and training junior team
               members to leading strategy for corporate intranet to development
@@ -84,7 +84,7 @@
           </div>
           <div class="column">
             <i class="fa fa-pencil-alt fa-3x goldenrod"></i>
-            <h2>Design</h2>
+            <span class="title">Design</span>
             <div class="blanchedalmond">
               Designing wireframes and crafting user experience journeys,
               collecting iterative feedback from clients and refining their
@@ -93,7 +93,7 @@
           </div>
           <div class="column">
             <i class="fa fa-code-branch fa-3x goldenrod"></i>
-            <h2>Code</h2>
+            <span class="title">Code</span>
             <div class="blanchedalmond">
               Where the rubber meets the road. Building sites and applications
               using the pillars of front-end development (HTML, CSS,
@@ -104,64 +104,105 @@
         </div>
       </section>
 
-      <section class="section static">
-        <div class="container container-centered">
-          <h1>About</h1>
-          <div>
-            <p class="blanchedalmond">
-              Senior consultant with seven years of experience developing for
-              the web, 10+ years in a variety of industries. Travels have
-              included UI/UX design, web/enterprise content management,
-              technical/creative writing, and building brand awareness.
+      <div class="about-section"></div>
+      <section class="section bg-waves">
+        <div class="container container-centered about">
+          <h2>About</h2>
+          <div class="blanchedalmond">
+            <p>
+              I'm a senior software engineer with seven years of experience
+              developing for the web, 10+ years in a variety of industries.
+              Travels have also included UI/UX design, web/enterprise content
+              management, technical/creative writing, and building brand
+              awareness.
+            </p>
+            <p>
+              Lately I've been building applications with Vue.js, front-end
+              testing with Jest, experimenting with Azure Blockchain Workbench,
+              and working to create a JavaScript encryption library for more
+              secure client/server communications.
             </p>
           </div>
         </div>
       </section>
 
-      <section class="section parallax">
-        <div class="container">
-          <div>
-            <ul>
-              <li>
-                <span class="icon"><i class="fa fa-building"></i></span> State
-                and Federal Government
-              </li>
-              <li>
-                <span class="icon"><i class="fa fa-plane"></i></span>
-                Aeronautics
-              </li>
-              <li>
-                <span class="icon"><i class="fas fa-dollar-sign"></i></span>
-                Financial Services
-              </li>
-              <li>
-                <span class="icon"><i class="far fa-lightbulb"></i></span>
-                Energy
-              </li>
-            </ul>
-          </div>
-          <div>
-            <ul>
-              <li>
-                <span class="icon"><i class="fa fa-cogs"></i></span> Engineering
-              </li>
-              <li>
-                <span class="icon"><i class="fa fa-phone"></i></span>
-                Telecommunications
-              </li>
-              <li>
-                <span class="icon"><i class="fa fa-globe"></i></span>
-                Environmental Planning
-              </li>
-              <li>
-                <span class="icon"><i class="fa fa-bus"></i></span>
-                Transportation
-              </li>
-            </ul>
-          </div>
-          <h1>Experience</h1>
+      <div class="projects-section">
+        <div class="downer">
+          <i
+            class="fas fa-2x fa-angle-double-down animated infinite bounce"
+          ></i>
+        </div>
+      </div>
+      <section class="section parallax bg2">
+        <div class="container container-two container-centered projects">
+          <ul>
+            <li>
+              Transportation app for making ferry reservations using Vue.js
+            </li>
+            <li>
+              Authentication and transaction protocol for driver services
+              applications
+            </li>
+            <li>Corporate intranet developer and strategist</li>
+          </ul>
+          <h2>Projects</h2>
         </div>
       </section>
+
+      <section class="section">
+        <div class="container container-two container-centered tools">
+          <h2>Some Things I Use</h2>
+          <ul>
+            <li>Vue.js</li>
+            <li>Nuxt</li>
+            <li>Babel</li>
+            <li>Node</li>
+            <li>Webpack</li>
+            <li>Parcel</li>
+            <li>Gulp</li>
+            <li>Bulma</li>
+            <li>Sass</li>
+          </ul>
+        </div>
+      </section>
+
+      <footer>
+        <ul class="footer-list">
+          <li>
+            <a
+              href="https://www.linkedin.com/in/ericdelia"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.github.com/escodel"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.twitter.com/ericdelia_"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fab fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a href="mailto:escodel@gmail.com">
+              <i class="fas fa-envelope"></i>
+            </a>
+          </li>
+        </ul>
+        <div class="byline">Designed & Built by Eric Delia</div>
+      </footer>
     </main>
 
     <script src="index.js"></script>
