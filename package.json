@@ -5,7 +5,7 @@
   "author": "escodel <escodel@gmail.com>",
   "private": true,
   "scripts": {
-    "sass": "node-sass -w sass -o css",
+    "sass": "node-sass -w src/sass -o dist/css",
     "images": "node utilities/images.js"
   },
   "dependencies": {},
